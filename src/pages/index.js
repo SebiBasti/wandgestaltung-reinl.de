@@ -3,6 +3,8 @@ import Image from 'next/image'
 import main from '@/styles/main.module.scss'
 import Logo from '@/components/logo'
 import Contact from '@/components/contact'
+import Profile from '@/components/profile'
+import Career from "@/components/career";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <main className={main.container}>
         <Logo/>
         <Contact/>
+        <Profile/>
+        <Career/>
       </main>
     </>
   )

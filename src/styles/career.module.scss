@@ -1,0 +1,22 @@
+.container {
+  h2 {
+    font-size: 1em;
+    margin-bottom: .5em;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    tr {
+      font-size: .8em;
+
+      td:first-child {
+        font-weight: bold;
+      }
+
+      td:last-child {
+        padding-left: .5em;
+      }
+    }
+  }
+}

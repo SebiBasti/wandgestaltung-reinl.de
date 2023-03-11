@@ -1,16 +1,29 @@
 .container {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--blue);
 
   .link {
     display: flex;
     align-items: center;
-    font-size: clamp(.8em, 2.5vw, 1.6em);
+    font-size: 1.5em;
 
     .image-container {
       position: relative;
       width: clamp(30px, 8vw, 70px);
       height: clamp(30px, 8vw, 70px);
+      margin-right: .5em;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 864px) {
+  .container {
+
+    .link {
+      font-size: clamp(.8em, 2.7vw, 1.6em);
     }
   }
 }
@@ -18,5 +31,11 @@
 @media screen and (max-width: 480px) {
   .container {
     display: block;
+    padding-bottom: .5em;
+
+    .link {
+      margin-bottom: .5em;
+      font-size: 4.4vw;
+    }
   }
 }
