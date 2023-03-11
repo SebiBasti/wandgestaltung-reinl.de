@@ -1,0 +1,9 @@
+.container {
+  min-height: 100vh;
+  width: calc(100vw - 4rem);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  outline: 1px dotted red;
+}

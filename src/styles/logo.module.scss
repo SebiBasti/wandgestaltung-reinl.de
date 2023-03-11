@@ -1,0 +1,5 @@
+.container {
+  position: relative;
+  height: clamp(45px, calc(16vw), 135px);
+  margin-bottom: 1em;
+}

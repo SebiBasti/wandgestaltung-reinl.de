@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  .link {
+    display: flex;
+    align-items: center;
+    font-size: clamp(.8em, 2.5vw, 1.6em);
+
+    .image-container {
+      position: relative;
+      width: clamp(30px, 8vw, 70px);
+      height: clamp(30px, 8vw, 70px);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    display: block;
+  }
+}
