@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import main from '@/styles/main.module.scss'
 import Logo from '@/components/logo'
 import Contact from '@/components/contact'
 import Profile from '@/components/profile'
-import Career from "@/components/career";
+import Pictures from '@/components/pictures'
+import Career from '@/components/career'
 
 export default function Home() {
   return (
@@ -15,10 +15,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={main.container}>
+      <main className={ main.container }>
         <Logo/>
         <Contact/>
         <Profile/>
+        <Pictures/>
         <Career/>
       </main>
     </>

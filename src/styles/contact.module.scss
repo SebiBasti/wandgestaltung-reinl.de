@@ -10,6 +10,10 @@
     align-items: center;
     font-size: 1.5em;
 
+    &:focus {
+      outline: var(--blue) 2px auto;
+    }
+
     .image-container {
       position: relative;
       width: clamp(30px, 8vw, 70px);
