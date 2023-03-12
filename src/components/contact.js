@@ -7,7 +7,7 @@ export default function Contact() {
     <section className={ contact.container }>
       <Link
         href={ 'tel:+49-179-111-0046' }
-        class={ contact.link }
+        className={ contact.link }
       >
         <div className={ contact['image-container'] }>
           <Image
@@ -21,7 +21,7 @@ export default function Contact() {
       </Link>
       <Link
         href={ 'mailto:mail@wandgestaltung-reinl.de' }
-        class={ contact.link }
+        className={ contact.link }
       >
         <div className={ contact['image-container'] }>
           <Image

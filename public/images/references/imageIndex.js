@@ -9,31 +9,42 @@ function importAll(r) {
   return r.keys().map(r);
 }
 
-const images = importAll(require.context('./', false, /\.(png|jpe?g|svg)$/));
+const images1 = importAll(require.context('/public/images/references/hamburger_bahnhof', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images2 = importAll(require.context('/public/images/references/malerarbeiten', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images3 = importAll(require.context('/public/images/references/risssanierung', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images4 = importAll(require.context('/public/images/references/schloss_biesdorf', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images5 = importAll(require.context('/public/images/references/wandbilder', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images6 = importAll(require.context('/public/images/references/youtube_space_berlin', false, /\.(png|jpe?g|JPE?G|svg)$/))
 
 const hamburgerBahnhof ={
   image: image1,
-  description: 'Hamburger Bahnhof'
+  description: 'Hamburger Bahnhof',
+  images: images1
 }
 const malerarbeiten ={
   image: image2,
-  description: 'Malerarbeiten'
+  description: 'Malerarbeiten',
+  images: images2
 }
 const risssanierung ={
   image: image3,
-  description: 'Risssanierung'
+  description: 'Risssanierung',
+  images: images3
 }
 const schlossBiesdorf ={
   image: image4,
-  description: 'Schloss Biesdorf'
+  description: 'Schloss Biesdorf',
+  images: images4
 }
 const wandbilder ={
   image: image5,
-  description: 'Wandbilder'
+  description: 'Wandbilder',
+  images: images5
 }
 const youtubeSpaceBerlin ={
   image: image6,
-  description: 'Youtube Space Berlin'
+  description: 'Youtube Space Berlin',
+  images: images6
 }
 
 const picturesArr = [hamburgerBahnhof, malerarbeiten, risssanierung, schlossBiesdorf, wandbilder, youtubeSpaceBerlin]
