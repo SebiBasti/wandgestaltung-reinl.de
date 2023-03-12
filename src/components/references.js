@@ -6,7 +6,7 @@ export default function References() {
       <h2>Referenzen:</h2>
       <h3>Risssanierungen</h3>
       <p>• Helma AG</p>
-      <h3>Tapeten:</h3>
+      <h3>Tapeten</h3>
       <p>• Hamburger Bahnhof</p>
       <p>• Galerie Esther Shipper</p>
       <p>• Grün Berlin GmbH</p>

@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Imprint() {
   return (
     <section className={ imprint.container }>
-      <h2>Impressum</h2>
+      <h2>Impressum:</h2>
       <h3>Angaben gemäß § 5 TMG</h3>
       <p>Daniel Reinl</p>
       <p>Wandgestaltung Reinl</p>
