@@ -6,7 +6,7 @@ export default function Profile() {
     <section className={ profile.container }>
       <div className={ profile['image-container'] }>
         <Image
-          src={ '/images/misc/profile.jpg' }
+          src={ '/images/misc/profile.png' }
           alt='Profil Bild Daniel Reinl'
           style={{ objectFit:"cover" }}
           fill
