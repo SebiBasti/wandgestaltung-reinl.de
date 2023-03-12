@@ -1,5 +1,5 @@
-import Image from "next/image"
-import { useState } from "react"
+import Image from 'next/image'
+import { useState } from 'react'
 
 export default function NextJsImage(...[image, , rect]) {
   const width = Math.round(
@@ -12,17 +12,17 @@ export default function NextJsImage(...[image, , rect]) {
   const [src, setSrc] = useState(image.src);
 
   return (
-    <div style={{ position: "relative", width, height }}>
+    <div style={{ position: 'relative', width, height }}>
       <Image
         fill
         alt={ `${src} Bild` }
         src={ src }
-        placeholder="blur"
-        blurDataURL="./images/misc/loading.svg"
-        onError={() => setSrc('./images/misc/placeholder.svg')}
+        placeholder='blur'
+        blurDataURL='/images/misc/loading.svg'
+        onError={() => setSrc('/images/misc/placeholder.svg')}
         draggable={ false }
         sizes={
-          typeof window !== "undefined"
+          typeof window !== 'undefined'
             ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
             : `${width}px`
         }
