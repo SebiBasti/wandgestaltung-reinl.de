@@ -69,19 +69,8 @@
       padding-left: 0;
 
       .header {
-        display: block;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 573px) {
-  .container {
-
-    .content {
-
-      .header {
         font-size: .77em;
+        display: block;
       }
     }
   }

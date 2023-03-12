@@ -16,14 +16,14 @@ export default function Profile() {
       <div className={ profile.content }>
         <div className={ profile.header }>
           <h1>Exklusive Malerarbeiten&nbsp;</h1>
-          <h1>seit 15 Jahren</h1>
+          <h1>seit 2004</h1>
         </div>
         <div className={ profile.body }>
           <h2>Leistungen:</h2>
           <p>• Tapezierarbeiten aller Art</p>
           <p>Fototapeten - Stofftapeten - Einzelanfertigungen - Handgefertigte Tapeten</p>
           <p>• Risssanierung</p>
-          <p>Elastische Sanierung nach (NORM) - Sanierung ruhender Setzrisse - Arbeiten werden auf Gewährleistung ausgeführt</p>
+          <p>Elastische Sanierung nach Merkblatt 13b vom Bundesverband für Sachwertschutz - Sanierung ruhender Setzrisse - Arbeiten werden auf Gewährleistung ausgeführt</p>
           <p>• Exklusive Malerarbeiten</p>
           <p>Farbberatung & Farbkonzepte - Maßgeschneiderte Lösungen</p>
           <p>• Sternenhimmel</p>

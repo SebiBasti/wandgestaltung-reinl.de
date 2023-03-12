@@ -1,0 +1,19 @@
+.container {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--blue);
+
+  h2 {
+    font-size: 1em;
+    margin-bottom: .5em;
+  }
+
+  h3 {
+    font-size: .9em;
+    margin: .5em 0;
+  }
+
+  p {
+    font-size: .9em;
+  }
+}

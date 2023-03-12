@@ -7,6 +7,7 @@ import Pictures from '@/components/pictures'
 import Career from '@/components/career'
 import Imprint from "@/components/imprint"
 import Footer from "@/components/footer"
+import References from "@/components/references"
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Contact/>
         <Profile/>
         <Pictures/>
+        <References/>
         <Career/>
         <Imprint/>
         <Footer/>

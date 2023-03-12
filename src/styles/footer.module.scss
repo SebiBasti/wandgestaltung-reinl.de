@@ -1,6 +1,7 @@
 .container {
   display: flex;
   font-size: .8em;
+  padding-bottom: .5em;
 
   .logo {
     --typewriter-speed: 2s;
@@ -61,3 +62,10 @@
     background: var(--grey);
   }
 }
+
+@media screen and (max-width: 480px) {
+  .container {
+    display: block;
+  }
+}
+

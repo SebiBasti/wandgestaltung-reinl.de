@@ -1,5 +1,4 @@
-import profile from '@/styles/profile.module.scss'
-import career from "@/styles/career.module.scss";
+import career from "@/styles/career.module.scss"
 
 
 export default function Career() {
