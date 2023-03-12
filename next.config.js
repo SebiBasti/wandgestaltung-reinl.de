@@ -13,7 +13,7 @@ const nextConfig = {
       {
         source: '/profil',
         destination: '/',
-        permanent: true,
+        permanent: true
       },
       {
         source: '/kontakt',
