@@ -46,6 +46,10 @@ export default function Pictures() {
           slides={ slides }
           render={{ slide: NextJsImage }}
           plugins={ [Fullscreen, Zoom] }
+          zoom={{
+            maxZoomPixelRatio: 1,
+            zoomInMultiplier: 2
+          }}
         />
       }
     </section>
