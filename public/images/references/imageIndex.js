@@ -1,20 +1,20 @@
-import image1 from "/public/images/references/hamburger_bahnhof/hamburger_bahnhof_1.JPG"
-import image2 from "/public/images/references/malerarbeiten/Malerarbeiten_1.JPG"
-import image3 from "/public/images/references/risssanierung/risssanierung_dummy.jpg"
-import image4 from "/public/images/references/schloss_biesdorf/schloss_biesdorf_1.jpg"
-import image5 from "/public/images/references/wandbilder/Art_traktiv_GmbH_Berlin_1.JPG"
-import image6 from "/public/images/references/youtube_space_berlin/youtube_space_berlin_1.jpeg"
+import image1 from './hamburger_bahnhof/hamburger_bahnhof_1.jpg'
+import image2 from './malerarbeiten/Malerarbeiten_1.jpg'
+import image3 from './risssanierung/risssanierung_dummy.jpg'
+import image4 from './schloss_biesdorf/schloss_biesdorf_1.jpg'
+import image5 from './wandbilder/Art_traktiv_GmbH_Berlin_1.jpg'
+import image6 from './youtube_space_berlin/youtube_space_berlin_1.jpeg'
 
 function importAll(r) {
   return r.keys().map(r);
 }
 
-const images1 = importAll(require.context('/public/images/references/hamburger_bahnhof', false, /\.(png|jpe?g|JPE?G|svg)$/))
-const images2 = importAll(require.context('/public/images/references/malerarbeiten', false, /\.(png|jpe?g|JPE?G|svg)$/))
-const images3 = importAll(require.context('/public/images/references/risssanierung', false, /\.(png|jpe?g|JPE?G|svg)$/))
-const images4 = importAll(require.context('/public/images/references/schloss_biesdorf', false, /\.(png|jpe?g|JPE?G|svg)$/))
-const images5 = importAll(require.context('/public/images/references/wandbilder', false, /\.(png|jpe?g|JPE?G|svg)$/))
-const images6 = importAll(require.context('/public/images/references/youtube_space_berlin', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images1 = importAll(require.context('./hamburger_bahnhof', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images2 = importAll(require.context('./malerarbeiten', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images3 = importAll(require.context('./risssanierung', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images4 = importAll(require.context('./schloss_biesdorf', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images5 = importAll(require.context('./wandbilder', false, /\.(png|jpe?g|JPE?G|svg)$/))
+const images6 = importAll(require.context('./youtube_space_berlin', false, /\.(png|jpe?g|JPE?G|svg)$/))
 
 const hamburgerBahnhof ={
   image: image1,

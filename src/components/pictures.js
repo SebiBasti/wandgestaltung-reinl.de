@@ -1,6 +1,6 @@
 import pictures from "@/styles/pictures.module.scss"
 import "yet-another-react-lightbox/styles.css"
-import {picturesArr} from "../../public/images/references/imageIndex"
+import { picturesArr } from "~images/references/imageIndex"
 import NextJsImage from "@/utils/NextJsImage"
 import Image from "next/image"
 import dynamic from "next/dynamic"
