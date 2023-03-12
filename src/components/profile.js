@@ -14,11 +14,11 @@ export default function Profile() {
         />
       </div>
       <div className={ profile.content }>
-        <div className={ profile.header }>
+        <span className={ profile.header }>
           <h1>Exklusive Malerarbeiten&nbsp;</h1>
           <h1>seit 2004</h1>
-        </div>
-        <div className={ profile.body }>
+        </span>
+        <span className={ profile.body }>
           <h2>Leistungen:</h2>
           <p>• Tapezierarbeiten aller Art</p>
           <p>Fototapeten - Stofftapeten - Einzelanfertigungen - Handgefertigte Tapeten</p>
@@ -28,7 +28,7 @@ export default function Profile() {
           <p>Farbberatung & Farbkonzepte - Maßgeschneiderte Lösungen</p>
           <p>• Sternenhimmel</p>
           <p>Einzigartige Maltechnik - Spezialfarben - künstlerische Ausprägung - höchste Ansprüche an Qualität und Ausführung</p>
-        </div>
+        </span>
       </div>
     </section>
   )
