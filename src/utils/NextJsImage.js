@@ -1,22 +1,25 @@
-import Image from "next/image";
+import Image from "next/image"
+import { useState } from "react"
 
 export default function NextJsImage(...[image, , rect]) {
-  const imageDefault = image.default
   const width = Math.round(
-    Math.min(rect.width, (rect.height / imageDefault.height) * imageDefault.width)
+    Math.min(rect.width, (rect.height / image.height) * image.width)
   );
   const height = Math.round(
-    Math.min(rect.height, (rect.width / imageDefault.width) * imageDefault.height)
+    Math.min(rect.height, (rect.width / image.width) * image.height)
   );
+
+  const [src, setSrc] = useState(image.src);
 
   return (
     <div style={{ position: "relative", width, height }}>
       <Image
         fill
-        alt=""
-        src={image.default}
-        loading="eager"
-        // placeholder="blur"
+        alt={ `${src} Bild` }
+        src={ src }
+        placeholder="blur"
+        blurDataURL="/images/misc/loading.svg"
+        onError={() => setSrc('/images/misc/placeholder.svg')}
         draggable={ false }
         sizes={
           typeof window !== "undefined"

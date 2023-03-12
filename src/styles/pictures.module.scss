@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--blue);
 
   button {
     all: unset;
@@ -9,6 +11,7 @@
     cursor: pointer;
     width: calc(50% - .5em);
     height: clamp(196px, calc(50vw - 2.5em), 392px);
+    box-shadow: 1px 1px 1px var(--black-transparent);
     margin-bottom: 1em;
 
     &:focus {

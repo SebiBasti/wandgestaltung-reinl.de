@@ -4,8 +4,9 @@ import { picturesArr } from "~images/references/imageIndex"
 import NextJsImage from "@/utils/NextJsImage"
 import Image from "next/image"
 import dynamic from "next/dynamic"
-import {useState} from 'react'
+import { useState } from 'react'
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen"
+import Zoom from "yet-another-react-lightbox/plugins/zoom"
 
 const Lightbox = dynamic(() => import('yet-another-react-lightbox'))
 
@@ -44,7 +45,7 @@ export default function Pictures() {
           close={() => setOpen(false)}
           slides={ slides }
           render={{ slide: NextJsImage }}
-          plugins={ [Fullscreen] }
+          plugins={ [Fullscreen, Zoom] }
         />
       }
     </section>
