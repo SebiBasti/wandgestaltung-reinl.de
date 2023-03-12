@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  font-size: .8em;
+
+  .logo {
+    --typewriter-speed: 2s;
+    --typewriter-steps: 13;
+
+    font-family: 'Courier Prime', monospace;
+    position: relative;
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding-top: 1px;
+
+    a {
+      color: var(--grey);
+      text-decoration: none;
+      text-transform: uppercase;
+      height: max-content;
+      flex-shrink: 0;
+
+      &:hover {
+        color: var(--black);
+      }
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &:before {
+        background: var(--white);
+        animation: typewriter var(--typewriter-speed) steps(var(--typewriter-steps)) 2s forwards;
+      }
+
+      &:after {
+        width: .125em;
+        height: 1.2rem;
+        background: transparent;
+        animation: typewriter var(--typewriter-speed) steps(var(--typewriter-steps)) 2s forwards,
+        blink 380ms steps(var(--typewriter-steps)) 1s 10;
+      }
+    }
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: var(--grey);
+  }
+}

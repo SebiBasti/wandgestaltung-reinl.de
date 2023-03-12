@@ -5,6 +5,8 @@ import Contact from '@/components/contact'
 import Profile from '@/components/profile'
 import Pictures from '@/components/pictures'
 import Career from '@/components/career'
+import Imprint from "@/components/imprint"
+import Footer from "@/components/footer"
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
         <Profile/>
         <Pictures/>
         <Career/>
+        <Imprint/>
+        <Footer/>
       </main>
     </>
   )
