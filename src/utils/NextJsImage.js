@@ -14,11 +14,21 @@ export default function NextJsImage(...[image, , rect]) {
   return (
     <div style={{ position: 'relative', width, height }}>
       <Image
+        alt={ 'loading animation' }
+        src={ '/images/misc/loading.svg' }
+        width={ 80 }
+        height={ 80 }
+        style={{
+          left: '50%',
+          position: 'absolute',
+          top: '50%',
+          transform: 'translate(-50%, -50%)'
+        }}
+      />
+      <Image
         fill
         alt={ `${src} Bild` }
         src={ src }
-        placeholder='blur'
-        blurDataURL='/images/misc/loading.svg'
         onError={() => setSrc('/images/misc/placeholder.svg')}
         draggable={ false }
         sizes={
