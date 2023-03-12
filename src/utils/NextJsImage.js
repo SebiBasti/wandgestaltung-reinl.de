@@ -18,8 +18,8 @@ export default function NextJsImage(...[image, , rect]) {
         alt={ `${src} Bild` }
         src={ src }
         placeholder="blur"
-        blurDataURL="/images/misc/loading.svg"
-        onError={() => setSrc('/images/misc/placeholder.svg')}
+        blurDataURL="./images/misc/loading.svg"
+        onError={() => setSrc('./images/misc/placeholder.svg')}
         draggable={ false }
         sizes={
           typeof window !== "undefined"

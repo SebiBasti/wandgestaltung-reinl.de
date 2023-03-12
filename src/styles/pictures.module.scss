@@ -34,8 +34,10 @@
 
 @media screen and (max-width: 480px) {
   .container {
+    display: block;
 
-    .button {
+    button {
+      display: block;
       width: 100%;
       height: calc(100vw - 4em);
     }

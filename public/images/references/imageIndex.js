@@ -21,13 +21,11 @@ const hamburgerBahnhof ={
   description: 'Hamburger Bahnhof',
   images: images1
 }
-console.log(hamburgerBahnhof)
 const malerarbeiten ={
   image: image2,
   description: 'Malerarbeiten',
   images: images2
 }
-console.log(malerarbeiten)
 const risssanierung ={
   image: image3,
   description: 'Risssanierung',
