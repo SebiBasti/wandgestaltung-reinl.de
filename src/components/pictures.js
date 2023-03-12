@@ -6,7 +6,7 @@ import Image from "next/image"
 import dynamic from "next/dynamic"
 import { useState } from 'react'
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen"
-import Zoom from "yet-another-react-lightbox/plugins/zoom"
+// import Zoom from "yet-another-react-lightbox/plugins/zoom"
 
 const Lightbox = dynamic(() => import('yet-another-react-lightbox'))
 
@@ -45,11 +45,11 @@ export default function Pictures() {
           close={() => setOpen(false)}
           slides={ slides }
           render={{ slide: NextJsImage }}
-          plugins={ [Fullscreen, Zoom] }
-          zoom={{
-            maxZoomPixelRatio: 1,
-            zoomInMultiplier: 2
-          }}
+          plugins={ [Fullscreen] } // Zoom deactivated for now
+          // zoom={{
+          //   maxZoomPixelRatio: 1,
+          //   zoomInMultiplier: 2
+          // }}
         />
       }
     </section>
