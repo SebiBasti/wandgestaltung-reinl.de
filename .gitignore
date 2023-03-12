@@ -30,5 +30,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# .idea files
 /.idea/jsLibraryMappings.xml
 /.idea/vcs.xml
