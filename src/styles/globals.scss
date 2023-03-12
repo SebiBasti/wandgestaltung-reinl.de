@@ -31,6 +31,12 @@ a {
   }
 }
 
+// Smoother image corners
+
+img {
+  border-radius: 2px;
+}
+
 // CSS Reset from: https://andy-bell.co.uk/a-modern-css-reset/
 
 /* Box sizing rules */
