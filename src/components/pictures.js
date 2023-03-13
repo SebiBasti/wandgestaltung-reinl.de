@@ -1,5 +1,6 @@
 import pictures from "@/styles/pictures.module.scss"
 import "yet-another-react-lightbox/styles.css"
+import "yet-another-react-lightbox/plugins/thumbnails.css"
 import { picturesArr } from "~images/references/imageIndex"
 import NextJsImage from "@/utils/NextJsImage"
 import Image from "next/image"
@@ -7,6 +8,7 @@ import dynamic from "next/dynamic"
 import { useState } from 'react'
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen"
 import Zoom from "yet-another-react-lightbox/plugins/zoom"
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails"
 
 const Lightbox = dynamic(() => import('yet-another-react-lightbox'))
 
@@ -45,7 +47,7 @@ export default function Pictures() {
           close={() => setOpen(false)}
           slides={ slides }
           render={{ slide: NextJsImage }}
-          plugins={ [Fullscreen, Zoom] } // Zoom deactivated for now
+          plugins={ [Fullscreen, Zoom, Thumbnails] }
           zoom={{
             maxZoomPixelRatio: 1,
             zoomInMultiplier: 2
