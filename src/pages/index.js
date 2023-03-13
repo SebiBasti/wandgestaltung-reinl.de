@@ -8,6 +8,7 @@ import Career from '@/components/career'
 import Imprint from "@/components/imprint"
 import Footer from "@/components/footer"
 import References from "@/components/references"
+import ScrollButton from "@/components/scrollButton";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <Career/>
         <Imprint/>
         <Footer/>
+        <ScrollButton/>
       </main>
     </>
   )

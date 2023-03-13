@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import contact from '@/styles/contact.module.scss'
-import Link from "next/link";
+import Link from "next/link"
 
 export default function Contact() {
   return (
