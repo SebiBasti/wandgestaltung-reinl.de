@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import main from '@/styles/main.module.scss'
 import Logo from '@/components/logo'
 import Contact from '@/components/contact'
@@ -7,8 +8,12 @@ import Pictures from '@/components/pictures'
 import Career from '@/components/career'
 import Imprint from "@/components/imprint"
 import Footer from "@/components/footer"
-import References from "@/components/references"
-import ScrollButton from "@/components/scrollButton";
+import References from '@/components/references'
+import ScrollButton from '@/components/scrollButton'
+
+const Navbar = dynamic(() => import("@/components/navbar"), {
+  ssr: false
+});
 
 export default function Home() {
   return (
@@ -21,6 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={ main.container }>
+        <Navbar/>
         <Logo/>
         <Contact/>
         <Profile/>

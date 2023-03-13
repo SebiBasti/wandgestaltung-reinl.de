@@ -18,7 +18,7 @@ export default function Pictures() {
   const [interactive, setInteractive] = useState(false)
 
   return (
-    <section className={ pictures.container }>
+    <section className={ pictures.container } id="pictures">
       { picturesArr.map((el, index) => {
         return (
           <button

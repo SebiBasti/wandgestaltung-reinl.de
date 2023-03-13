@@ -1,0 +1,32 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 50px;
+  width: 100vw;
+  background-color: var(--white);
+  opacity: 100;
+  transition: opacity .5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--blue);
+
+  a {
+    margin: 0 .5em;
+  }
+}
+
+.visible {
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-wrap: wrap;
+    height: 70px;
+    padding: .5em;
+  }
+}

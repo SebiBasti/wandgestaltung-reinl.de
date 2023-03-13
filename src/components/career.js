@@ -3,7 +3,7 @@ import career from "@/styles/career.module.scss"
 
 export default function Career() {
   return (
-    <section className={ career.container }>
+    <section className={ career.container } id="career">
       <h2>Laufbahn:</h2>
       <table>
         <tbody>

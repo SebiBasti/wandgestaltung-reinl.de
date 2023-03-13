@@ -3,7 +3,7 @@ import profile from '@/styles/profile.module.scss'
 
 export default function Profile() {
   return (
-    <section className={ profile.container }>
+    <section className={ profile.container } id="profile">
       <div className={ profile['image-container'] }>
         <Image
           src={ '/images/misc/profile.png' }

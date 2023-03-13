@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function Contact() {
   return (
-    <section className={ contact.container }>
+    <section className={ contact.container } id="contact">
       <Link
         href={ 'tel:+49-179-111-0046' }
         className={ contact.link }
