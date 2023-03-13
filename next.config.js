@@ -19,6 +19,11 @@ const nextConfig = {
         source: '/kontakt',
         destination: '/',
         permanent: true
+      },
+      {
+        source: '/impressum',
+        destination: '/',
+        permanent: true
       }
     ]
   }
