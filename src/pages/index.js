@@ -15,7 +15,8 @@ export default function Home() {
     <>
       <Head>
         <title>Wandgestaltung Reinl</title>
-        <meta name="description" content="Wandgestaltung Reinl" />
+        <meta name="description" content="Werte schaffen, Werte erhalten - Exklusive Malerarbeiten seit 2004" />
+        <meta name="robots" content="noodp, noydir" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
