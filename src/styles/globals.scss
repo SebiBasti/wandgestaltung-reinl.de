@@ -37,20 +37,6 @@ img {
   border-radius: 2px;
 }
 
-// Fix for lightbox fullscreen showing 1px of page at the top
-
-.yarl__portal_open {
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    width: 100vw;
-    height: 10px;
-    background-color: red;
-  }
-}
-
 // CSS Reset from: https://andy-bell.co.uk/a-modern-css-reset/
 
 /* Box sizing rules */
