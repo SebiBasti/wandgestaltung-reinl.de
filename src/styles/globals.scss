@@ -40,7 +40,14 @@ img {
 // Fix for lightbox fullscreen showing 1px of page at the top
 
 .yarl__portal_open {
-  outline: 10px solid rgb(0, 0, 0);
+
+  &:after {
+    content: '';
+    top: 0;
+    width: 100vw;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+  }
 }
 
 // CSS Reset from: https://andy-bell.co.uk/a-modern-css-reset/
