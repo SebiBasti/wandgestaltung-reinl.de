@@ -24,6 +24,7 @@ export default function NextJsImage(...[image, , rect]) {
           top: '50%',
           transform: 'translate(-50%, -50%)'
         }}
+        priority
       />
       <Image
         fill
