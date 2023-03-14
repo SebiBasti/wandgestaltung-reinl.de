@@ -38,6 +38,9 @@ export default function Pictures() {
             <p>
               { el.description }
             </p>
+            <noscript>
+              <p className={ pictures.noscript }>Aktivieren Sie Javascript um die Bildergalerie aufzurufen.</p>
+            </noscript>
           </button>
         )
       }) }
