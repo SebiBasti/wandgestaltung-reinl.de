@@ -30,14 +30,15 @@
       text-shadow: 1px 1px 1px var(--white-transparent);
       backdrop-filter: blur(10px);
     }
+  }
 
-    .noscript {
-      all: unset;
-      position: absolute;
-      inset: 50%;
-      transform: translate(-50%, -50%);
-      background-color: var(--white);
-    }
+  .noscript {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    background-color: rgb(239,239,239);
+    border: 2px solid var(--blue);
+    margin-bottom: 1em;
   }
 }
 

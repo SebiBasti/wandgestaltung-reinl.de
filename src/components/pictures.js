@@ -19,6 +19,9 @@ export default function Pictures() {
 
   return (
     <section className={ pictures.container } id="pictures">
+      <noscript>
+        <h3 className={ pictures.noscript }>Aktivieren Sie Javascript um die Bildergalerie aufzurufen.</h3>
+      </noscript>
       { picturesArr.map((el, index) => {
         return (
           <button
@@ -38,9 +41,6 @@ export default function Pictures() {
             <p>
               { el.description }
             </p>
-            <noscript>
-              <p className={ pictures.noscript }>Aktivieren Sie Javascript um die Bildergalerie aufzurufen.</p>
-            </noscript>
           </button>
         )
       }) }
