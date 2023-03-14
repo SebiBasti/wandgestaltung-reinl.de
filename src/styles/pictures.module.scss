@@ -32,9 +32,11 @@
     }
 
     .noscript {
+      all: unset;
       position: absolute;
       inset: 50%;
       transform: translate(-50%, -50%);
+      background-color: var(--white);
     }
   }
 }
