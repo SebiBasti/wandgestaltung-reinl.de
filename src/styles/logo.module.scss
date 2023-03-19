@@ -3,3 +3,9 @@
   height: clamp(45px, calc(16vw), 135px);
   margin-bottom: 2em;
 }
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-bottom: 1em;
+  }
+}
