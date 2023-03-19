@@ -9,7 +9,7 @@ export default function NextJsImage(...[image, , rect]) {
     Math.min(rect.height, (rect.width / image.width) * image.height)
   );
 
-  const [src, setSrc] = useState(image.src);
+  const [src, setSrc] = useState(image.src)
 
   return (
     <div style={{ position: 'relative', width, height }}>

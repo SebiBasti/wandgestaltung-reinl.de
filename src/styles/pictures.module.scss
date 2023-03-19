@@ -46,7 +46,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@container (max-width: 420px) {
   .container {
     display: block;
 
@@ -54,6 +54,21 @@
       display: block;
       width: 100%;
       height: calc(100vw - 4em);
+    }
+  }
+}
+
+// Classic Media Queries for browsers without container query support
+@supports not (container-type: inline-size) {
+  @media screen and (max-width: 480px) {
+    .container {
+      display: block;
+
+      button {
+        display: block;
+        width: 100%;
+        height: calc(100vw - 4em);
+      }
     }
   }
 }

@@ -9,6 +9,7 @@ export default function Profile() {
           src={ '/images/misc/profile.png' }
           alt='Profil Bild Daniel Reinl'
           style={{ objectFit:"cover" }}
+          sizes={ "90vw" }
           fill
           priority
         />
