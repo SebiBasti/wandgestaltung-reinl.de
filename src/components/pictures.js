@@ -36,7 +36,6 @@ export default function Pictures() {
               src={ el.image }
               alt={ `${el.description} Bildergalerie` }
               style={{ objectFit:"cover" }}
-              sizes={ "75vw" }
               fill
             />
             <p>
