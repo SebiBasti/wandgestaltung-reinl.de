@@ -6,12 +6,10 @@ import image5 from './wandbilder/reinl_1.jpg'
 import image6 from './youtube_space_berlin/IMG_1458.jpg'
 
 const importAll = (r: __WebpackModuleApi.RequireContext ) => {
-  // return r.keys().map(r).map((el: any) => ({...el.default, type: 'custom-slide' as const}))
   return r.keys().map(r).map((el: any) => el.default)
 }
 
 const images1 = importAll(require.context('./hamburger_bahnhof', false, /\.(png|jpe?g|svg)$/))
-// console.log(typeof images1[0])
 const images2 = importAll(require.context('./malerarbeiten', false, /\.(png|jpe?g|svg)$/))
 const images3 = importAll(require.context('./risssanierung', false, /\.(png|jpe?g|svg)$/))
 const images4 = importAll(require.context('./schloss_biesdorf', false, /\.(png|jpe?g|svg)$/))
