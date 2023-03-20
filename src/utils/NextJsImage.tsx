@@ -1,7 +1,12 @@
 import Image from 'next/image'
 import { useState } from 'react'
+interface NextJsImage {
+    height: number,
+    width: number,
+    src: string
+}
 
-export default function NextJsImage(...[image, , rect]) {
+export default function NextJsImage(...[image, , rect]: Array<NextJsImage>) {
   const width = Math.round(
     Math.min(rect.width, (rect.height / image.height) * image.width)
   );
@@ -39,5 +44,5 @@ export default function NextJsImage(...[image, , rect]) {
         }
       />
     </div>
-  );
+  )
 }
