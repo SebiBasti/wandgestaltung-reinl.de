@@ -15,7 +15,7 @@ const Lightbox = dynamic(() => import('yet-another-react-lightbox'))
 
 export default function Pictures() {
   const [open, setOpen] = useState(false)
-  const [slides, setSlides] = useState(true)
+  const [slides, setSlides] = useState([])
   const [interactive, setInteractive] = useState(false)
 
   return (
