@@ -35,4 +35,6 @@ yarn-error.log*
 /.idea/jsLibraryMappings.xml
 /.idea/vcs.xml
 /.idea/inspectionProfiles/Project_Default.xml
-/next-env.d.ts
+
+# Next.js typescript config file
+next-env.d.ts
