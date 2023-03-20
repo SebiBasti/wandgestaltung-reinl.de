@@ -1,10 +1,3 @@
-import image1 from './hamburger_bahnhof/004.jpg'
-import image2 from './malerarbeiten/IMG_4044.jpg'
-import image3 from './risssanierung/risssanierung_dummy.jpg'
-import image4 from './schloss_biesdorf/schloss_biesdorf_1.jpg'
-import image5 from './wandbilder/reinl_1.jpg'
-import image6 from './youtube_space_berlin/IMG_1458.jpg'
-
 const importAll = (r: __WebpackModuleApi.RequireContext ) => {
   return r.keys().map(r).map((el: any) => el.default)
 }
@@ -17,32 +10,32 @@ const images5 = importAll(require.context('./wandbilder', false, /\.(png|jpe?g|s
 const images6 = importAll(require.context('./youtube_space_berlin', false, /\.(png|jpe?g|svg)$/))
 
 const hamburgerBahnhof = {
-  image: image1,
+  image: images1[0],
   description: 'Hamburger Bahnhof',
   images: images1
 }
 const malerarbeiten = {
-  image: image2,
+  image: images2[0],
   description: 'Malerarbeiten',
   images: images2
 }
 const risssanierung = {
-  image: image3,
+  image: images3[0],
   description: 'Risssanierung',
   images: images3
 }
 const schlossBiesdorf = {
-  image: image4,
+  image: images4[0],
   description: 'Schloss Biesdorf',
   images: images4
 }
 const wandbilder = {
-  image: image5,
+  image: images5[0],
   description: 'Wandbilder',
   images: images5
 }
 const youtubeSpaceBerlin = {
-  image: image6,
+  image: images6[0],
   description: 'Youtube Space Berlin',
   images: images6
 }

@@ -3,7 +3,6 @@ import { ReactNode, useState } from 'react'
 import { ContainerRect } from 'yet-another-react-lightbox'
 
 export default function NextJsImage(slide: any, offset: number, rect: ContainerRect): ReactNode {
-  console.log(arguments)
   const width = Math.round(
     Math.min(rect.width, (rect.height / slide.height) * slide.width)
   )
