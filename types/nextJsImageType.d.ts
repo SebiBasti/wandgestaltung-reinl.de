@@ -1,11 +1,5 @@
 import { StaticImageData } from 'next/image'
 
-export interface NextJsImageType {
-  height: number,
-  width: number,
-  src: string
-}
-
 interface ImageType {
   src: string,
   height: number,
@@ -13,8 +7,8 @@ interface ImageType {
   blurDataURL: string,
   blurWidth: number,
   blurHeight: number
-
 }
+
 export interface ImageObj {
   description: string,
   image: StaticImageData,

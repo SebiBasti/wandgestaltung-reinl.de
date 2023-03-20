@@ -1,17 +1,17 @@
 import Image from 'next/image'
 import { ReactNode, useState } from 'react'
-import { NextJsImageType } from '~types/nextJsImageType'
+import { ContainerRect } from 'yet-another-react-lightbox'
 
-export default function NextJsImage(...[image, , rect]: Array<NextJsImageType>) {
+export default function NextJsImage(slide: any, offset: number, rect: ContainerRect): ReactNode {
   console.log(arguments)
   const width = Math.round(
-    Math.min(rect.width, (rect.height / image.height) * image.width)
+    Math.min(rect.width, (rect.height / slide.height) * slide.width)
   )
   const height = Math.round(
-    Math.min(rect.height, (rect.width / image.width) * image.height)
+    Math.min(rect.height, (rect.width / slide.width) * slide.height)
   )
 
-  const [src, setSrc] = useState(image.src)
+  const [src, setSrc] = useState(slide.src)
 
   return (
     <div style={{ position: 'relative', width, height }}>
