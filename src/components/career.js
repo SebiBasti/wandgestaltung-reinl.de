@@ -1,9 +1,9 @@
-import career from "@/styles/career.module.scss"
-
+import career from '@/styles/career.module.scss'
+import utils from '@/styles/utils.module.scss'
 
 export default function Career() {
   return (
-    <section className={ career.container } id="career">
+    <section className={ `${career.container} ${utils['border-bottom']}` } id="career">
       <h2>Laufbahn:</h2>
       <table>
         <tbody>

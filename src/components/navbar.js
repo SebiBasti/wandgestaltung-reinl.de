@@ -1,9 +1,8 @@
-import navbar from "@/styles/navbar.module.scss"
-import { useEffect, useState } from "react"
-import Link from "next/link";
+import navbar from '@/styles/navbar.module.scss'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export default function Navbar() {
-  const [yOffset, setYOffset] = useState(window.scrollY)
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
@@ -15,7 +14,6 @@ export default function Navbar() {
     const currentYOffset = window.scrollY
     const visible = 120 > currentYOffset
 
-    setYOffset(currentYOffset)
     setVisible(visible)
   }
 

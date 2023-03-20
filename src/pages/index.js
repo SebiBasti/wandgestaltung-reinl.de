@@ -13,7 +13,7 @@ import ScrollButton from '@/components/scrollButton'
 
 const Navbar = dynamic(() => import("@/components/navbar"), {
   ssr: false
-});
+})
 
 export default function Home() {
   return (

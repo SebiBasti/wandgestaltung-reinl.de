@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import imprint from '@/styles/imprint.module.scss'
-import Link from "next/link"
+import utils from '@/styles/utils.module.scss'
 
 export default function Imprint() {
   return (
-    <section className={ imprint.container } id="imprint">
+    <section className={ `${imprint.container} ${utils['border-bottom']}` } id="imprint">
       <h2>Impressum:</h2>
       <h3>Angaben gemäß § 5 TMG</h3>
       <p>Daniel Reinl</p>

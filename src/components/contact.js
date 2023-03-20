@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import contact from '@/styles/contact.module.scss'
-import Link from "next/link"
+import utils from '@/styles/utils.module.scss'
 
 export default function Contact() {
   return (
-    <section className={ contact.container } id="contact">
+    <section className={ `${contact.container} ${utils['border-bottom']}` } id="contact">
       <Link
         href={ 'tel:+49-179-111-0046' }
         className={ contact.link }

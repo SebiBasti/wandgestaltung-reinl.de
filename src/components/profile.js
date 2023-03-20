@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import profile from '@/styles/profile.module.scss'
+import utils from '@/styles/utils.module.scss'
 
 export default function Profile() {
   return (
-    <section className={ profile.container } id="profile">
+    <section className={ `${profile.container} ${utils['border-bottom']}` } id="profile">
       <div className={ profile['image-container'] }>
         <Image
           src={ '/images/misc/profile.png' }

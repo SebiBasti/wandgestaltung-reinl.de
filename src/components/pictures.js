@@ -1,14 +1,15 @@
-import pictures from "@/styles/pictures.module.scss"
-import "yet-another-react-lightbox/styles.css"
-import "yet-another-react-lightbox/plugins/thumbnails.css"
-import { picturesArr } from "~images/references/imageIndex"
-import NextJsImage from "@/utils/NextJsImage"
-import Image from "next/image"
-import dynamic from "next/dynamic"
+import pictures from '@/styles/pictures.module.scss'
+import utils from '@/styles/utils.module.scss'
+import 'yet-another-react-lightbox/styles.css'
+import 'yet-another-react-lightbox/plugins/thumbnails.css'
+import { picturesArr } from '~images/references/imageIndex'
+import NextJsImage from '@/utils/NextJsImage'
+import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { useState } from 'react'
-import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen"
-import Zoom from "yet-another-react-lightbox/plugins/zoom"
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails"
+import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
+import Zoom from 'yet-another-react-lightbox/plugins/zoom'
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 
 const Lightbox = dynamic(() => import('yet-another-react-lightbox'))
 
@@ -18,7 +19,7 @@ export default function Pictures() {
   const [interactive, setInteractive] = useState(false)
 
   return (
-    <section className={ pictures.container } id="pictures">
+    <section className={ `${pictures.container} ${utils['border-bottom']}` } id="pictures">
       <noscript>
         <h3 className={ pictures.noscript }>Aktivieren Sie Javascript um die Bildergalerie aufzurufen.</h3>
       </noscript>
