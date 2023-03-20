@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import { NextJsImageType } from '~types/nextJsImageType'
 
 export default function NextJsImage(...[image, , rect]: Array<NextJsImageType>) {
+  console.log(arguments)
   const width = Math.round(
     Math.min(rect.width, (rect.height / image.height) * image.width)
   )

@@ -57,7 +57,7 @@ export default function Pictures() {
           close={() => setOpen(false)}
           slides={ slides }
           render={{
-            slide: () => <>{ NextJsImage }</>
+            slide: (slide) => NextJsImage
           }}
           plugins={ [Fullscreen, Zoom, Thumbnails] }
           zoom={{
