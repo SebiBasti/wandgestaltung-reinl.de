@@ -1,4 +1,4 @@
-export default {
+const SEO = {
   title: 'Wandgestaltung Reinl',
   description: 'Werte schaffen, Werte erhalten - Exklusive Malerarbeiten seit 2004',
   canonical: 'https://www.wangestaltung-reinl.de/',
@@ -20,3 +20,5 @@ export default {
     ],
   },
 }
+
+export default SEO

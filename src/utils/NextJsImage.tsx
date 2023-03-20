@@ -1,20 +1,16 @@
 import Image from 'next/image'
 import { useState } from 'react'
-interface NextJsImage {
-    height: number,
-    width: number,
-    src: string
-}
+import { NextJsImageType } from '~types/nextJsImageType'
 
-export default function NextJsImage(...[image, , rect]: Array<NextJsImage>) {
+export default function NextJsImage(...[image, , rect]: Array<NextJsImageType>) {
   const width = Math.round(
     Math.min(rect.width, (rect.height / image.height) * image.width)
-  );
+  )
   const height = Math.round(
     Math.min(rect.height, (rect.width / image.width) * image.height)
-  );
+  )
 
-  const [src, setSrc] = useState(image.src);
+  const [src, setSrc] = useState(image.src)
 
   return (
     <div style={{ position: 'relative', width, height }}>

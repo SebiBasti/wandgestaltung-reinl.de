@@ -6,24 +6,29 @@ import { picturesArr } from '~images/references/imageIndex'
 import NextJsImage from '@/utils/NextJsImage'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
+import { ImageObj, ImageType } from '~types/nextJsImageType'
 
-const Lightbox = dynamic(() => import('yet-another-react-lightbox'))
+import { Lightbox as StaticLightbox } from 'yet-another-react-lightbox'
+
+const Lightbox = dynamic<React.ComponentProps<typeof StaticLightbox>>(
+    () => import('yet-another-react-lightbox')
+)
 
 export default function Pictures() {
-  const [open, setOpen] = useState(false)
-  const [slides, setSlides] = useState([])
-  const [interactive, setInteractive] = useState(false)
+  const [open, setOpen] = useState<boolean>(false)
+  const [slides, setSlides] = useState<Array<ImageType>>([])
+  const [interactive, setInteractive] = useState<boolean>(false)
 
   return (
     <section className={ `${pictures.container} ${utils['border-bottom']}` } id="pictures">
       <noscript>
         <h3 className={ pictures.noscript }>Aktivieren Sie Javascript um die Bildergalerie aufzurufen.</h3>
       </noscript>
-      { picturesArr.map((el, index) => {
+      { picturesArr.map((el: ImageObj, index: number) => {
         return (
           <button
             onClick={() => {
@@ -48,10 +53,12 @@ export default function Pictures() {
       }) }
       { interactive &&
         <Lightbox
-          open={ open }
+          open={ true }
           close={() => setOpen(false)}
           slides={ slides }
-          render={{ slide: NextJsImage }}
+          render={{
+            slide: () => <>{ NextJsImage }</>
+          }}
           plugins={ [Fullscreen, Zoom, Thumbnails] }
           zoom={{
             maxZoomPixelRatio: 1,
