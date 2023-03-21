@@ -11,12 +11,37 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/home',
+        destination: '/',
+        permanent: true
+      },
+      {
         source: '/profil',
         destination: '/',
         permanent: true
       },
       {
+        source: '/maler-lackierer',
+        destination: '/',
+        permanent: true
+      },
+      {
+        source: '/sterne',
+        destination: '/',
+        permanent: true
+      },
+      {
+        source: '/angebote',
+        destination: '/',
+        permanent: true
+      },
+      {
         source: '/kontakt',
+        destination: '/',
+        permanent: true
+      },
+      {
+        source: '/partnerlinks',
         destination: '/',
         permanent: true
       },
