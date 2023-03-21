@@ -53,7 +53,7 @@ export default function Pictures() {
       }) }
       { interactive &&
         <Lightbox
-          open={ true }
+          open={ open }
           close={() => setOpen(false)}
           slides={ slides }
           render={{ slide: NextJsImage }}
