@@ -1,13 +1,11 @@
-const importAll = (r: __WebpackModuleApi.RequireContext ) => {
-  return r.keys().map(r).map((el: any) => el.default)
-}
+import { importAll } from '@/utils'
 
-const images1 = importAll(require.context('./hamburger_bahnhof', false, /\.(png|jpe?g|svg)$/))
-const images2 = importAll(require.context('./malerarbeiten', false, /\.(png|jpe?g|svg)$/))
-const images3 = importAll(require.context('./risssanierung', false, /\.(png|jpe?g|svg)$/))
-const images4 = importAll(require.context('./schloss_biesdorf', false, /\.(png|jpe?g|svg)$/))
-const images5 = importAll(require.context('./wandbilder', false, /\.(png|jpe?g|svg)$/))
-const images6 = importAll(require.context('./youtube_space_berlin', false, /\.(png|jpe?g|svg)$/))
+const images1 = importAll<HTMLImageElement>(require.context('./hamburger_bahnhof', false, /\.(png|jpe?g|svg)$/))
+const images2 = importAll<HTMLImageElement>(require.context('./malerarbeiten', false, /\.(png|jpe?g|svg)$/))
+const images3 = importAll<HTMLImageElement>(require.context('./risssanierung', false, /\.(png|jpe?g|svg)$/))
+const images4 = importAll<HTMLImageElement>(require.context('./schloss_biesdorf', false, /\.(png|jpe?g|svg)$/))
+const images5 = importAll<HTMLImageElement>(require.context('./wandbilder', false, /\.(png|jpe?g|svg)$/))
+const images6 = importAll<HTMLImageElement>(require.context('./youtube_space_berlin', false, /\.(png|jpe?g|svg)$/))
 
 const hamburgerBahnhof = {
   image: images1[0],
