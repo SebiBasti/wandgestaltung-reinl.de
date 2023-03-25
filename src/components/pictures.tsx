@@ -10,7 +10,6 @@ import React, { useState } from 'react'
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
-import { ImageObj, ImageType } from '~types/nextJsImageType'
 
 import { Lightbox as StaticLightbox } from 'yet-another-react-lightbox'
 
@@ -20,7 +19,7 @@ const Lightbox = dynamic<React.ComponentProps<typeof StaticLightbox>>(
 
 export default function Pictures() {
   const [open, setOpen] = useState<boolean>(false)
-  const [slides, setSlides] = useState<Array<ImageType>>([])
+  const [slides, setSlides] = useState<HTMLImageElement[]>([])
   const [interactive, setInteractive] = useState<boolean>(false)
 
   return (
@@ -28,7 +27,7 @@ export default function Pictures() {
       <noscript>
         <h3 className={ pictures.noscript }>Aktivieren Sie Javascript um die Bildergalerie aufzurufen.</h3>
       </noscript>
-      { picturesArr.map((el: ImageObj, index: number) => {
+      { picturesArr.map((el, index: number) => {
         return (
           <button
             onClick={() => {

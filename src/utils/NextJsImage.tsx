@@ -1,13 +1,16 @@
 import Image from 'next/image'
 import { ReactNode, useState } from 'react'
-import { ContainerRect } from 'yet-another-react-lightbox'
+import { ContainerRect, SlideImage } from 'yet-another-react-lightbox'
 
-export default function NextJsImage(slide: any, offset: number, rect: ContainerRect): ReactNode {
+export default function NextJsImage(slide: SlideImage, offset: number, rect: ContainerRect): ReactNode {
+  const slideWidth = slide.width ?? 0
+  const slideHeight = slide.height ?? 0
+
   const width = Math.round(
-    Math.min(rect.width, (rect.height / slide.height) * slide.width)
+    Math.min(rect.width, (rect.height / slideHeight) * slideWidth)
   )
   const height = Math.round(
-    Math.min(rect.height, (rect.width / slide.width) * slide.height)
+    Math.min(rect.height, (rect.width / slideWidth) * slideHeight)
   )
 
   const [src, setSrc] = useState(slide.src)
