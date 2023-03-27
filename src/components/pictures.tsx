@@ -1,4 +1,3 @@
-import { Lightbox as StaticLightbox } from 'yet-another-react-lightbox'
 import Counter from 'yet-another-react-lightbox/plugins/counter'
 import 'yet-another-react-lightbox/plugins/counter.css'
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
@@ -6,49 +5,109 @@ import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/styles.css'
-import { picturesArr } from '~images/references/imageIndex'
 
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
-import { useDebounce, useWindowDimensions } from '@/utils'
+import { CustomLightboxState, useDebounce, useWindowDimensions } from '@/utils'
 import { NextJsImage } from '@/utils'
+
+import { picturesArr } from '~images/references/imageIndex'
 
 import pictures from '@/styles/pictures.module.scss'
 import utils from '@/styles/utils.module.scss'
 
-const Lightbox = dynamic<React.ComponentProps<typeof StaticLightbox>>(
-  () => import('yet-another-react-lightbox'),
-  {
-    ssr: false,
-  }
-)
+const Lightbox = dynamic(() => import('yet-another-react-lightbox'), {
+  ssr: false
+})
 
 export function Pictures() {
-  const [open, setOpen] = useState<boolean>(false)
-  const [interactive, setInteractive] = useState<boolean>(false)
-  const [loaded, setLoaded] = useState<boolean>(false)
-  const [slides, setSlides] = useState<HTMLImageElement[]>([])
-  const { height, width } = useWindowDimensions()
+  const [state, setState] = useState<CustomLightboxState>({
+    open: false,
+    interactive: false,
+    loaded: false,
+    slides: []
+  })
+  const { height } = useWindowDimensions()
   const debouncedHeight = useDebounce(height)
   const ref = useRef<any>(null)
 
-  const toggleThumbnails = () => {
+  const toggleThumbnails = useCallback(() => {
     if (ref.current !== null) {
       ;((debouncedHeight ?? 0) <= 400
         ? ref.current?.hide
         : ref.current?.show)?.()
     }
-  }
+  }, [ref, debouncedHeight])
+
+  const handleResize = useCallback(() => {
+    state.loaded && toggleThumbnails()
+  }, [state, toggleThumbnails])
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      toggleThumbnails()
+    window.addEventListener('resize', handleResize)
+    state.loaded && toggleThumbnails()
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [handleResize, state, toggleThumbnails])
+
+  const pictureButtons = useMemo(() => {
+    return picturesArr.map((el, index: number) => {
+      return (
+        <button
+          onClick={() => {
+            setState({
+              ...state,
+              slides: el.images,
+              open: true,
+              interactive: true
+            })
+          }}
+          key={index}
+        >
+          <Image
+            src={el.image}
+            alt={`${el.description} Bildergalerie`}
+            style={{ objectFit: 'cover' }}
+            sizes={'75vw'}
+            fill
+          />
+          <p>{el.description}</p>
+        </button>
+      )
     })
-    loaded && toggleThumbnails()
-  }, [debouncedHeight, toggleThumbnails])
+  }, [state, picturesArr])
+
+  const lightboxElement = useMemo(() => {
+    return (
+      <Lightbox
+        open={state.open}
+        close={() => setState({ ...state, open: false })}
+        slides={state.slides}
+        render={{ slide: NextJsImage }}
+        plugins={[Fullscreen, Zoom, Thumbnails, Counter]}
+        zoom={{
+          maxZoomPixelRatio: 2,
+          zoomInMultiplier: 2
+        }}
+        thumbnails={{
+          vignette: false,
+          imageFit: 'cover',
+          showToggle: true,
+          ref: ref
+        }}
+        counter={{ style: { top: 'unset', bottom: 0 } }}
+        on={{
+          entering: () => setState({ ...state, loaded: true }),
+          exiting: () => setState({ ...state, loaded: false })
+        }}
+      />
+    )
+  }, [state, NextJsImage, ref])
 
   return (
     <section
@@ -60,51 +119,8 @@ export function Pictures() {
           Aktivieren Sie Javascript um die Bildergalerie aufzurufen.
         </h3>
       </noscript>
-      {picturesArr.map((el, index: number) => {
-        return (
-          <button
-            onClick={() => {
-              setSlides(el.images)
-              setOpen(true)
-              setInteractive(true)
-            }}
-            key={index}
-          >
-            <Image
-              src={el.image}
-              alt={`${el.description} Bildergalerie`}
-              style={{ objectFit: 'cover' }}
-              sizes={'75vw'}
-              fill
-            />
-            <p>{el.description}</p>
-          </button>
-        )
-      })}
-      {interactive && (
-        <Lightbox
-          open={open}
-          close={() => setOpen(false)}
-          slides={slides}
-          render={{ slide: NextJsImage }}
-          plugins={[Fullscreen, Zoom, Thumbnails, Counter]}
-          zoom={{
-            maxZoomPixelRatio: 2,
-            zoomInMultiplier: 2,
-          }}
-          thumbnails={{
-            vignette: false,
-            imageFit: 'cover',
-            showToggle: true,
-            ref: ref,
-          }}
-          counter={{ style: { top: 'unset', bottom: 0 } }}
-          on={{
-            entering: () => setLoaded(true),
-            exiting: () => setLoaded(false),
-          }}
-        />
-      )}
+      {pictureButtons}
+      {state.interactive && lightboxElement}
     </section>
   )
 }
