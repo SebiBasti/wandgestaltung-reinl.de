@@ -70,7 +70,7 @@ export function Pictures() {
           render={{ slide: NextJsImage }}
           plugins={[Fullscreen, Zoom, Thumbnails, Counter]}
           zoom={{
-            maxZoomPixelRatio: 1,
+            maxZoomPixelRatio: 2,
             zoomInMultiplier: 2,
           }}
           thumbnails={{ vignette: false, imageFit: 'cover' }}

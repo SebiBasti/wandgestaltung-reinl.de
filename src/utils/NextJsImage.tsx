@@ -13,30 +13,26 @@ export function NextJsImage(props: RenderSlideProps): ReactNode {
   const { imageFit } = useLightboxProps().carousel
   const cover =
     isImageSlide(props.slide) && isImageFitCover(props.slide, imageFit)
-  const zoom = Math.round(props.zoom ?? 1)
-  const limitedZoom = zoom <= 4 ? zoom : 4
   const slideWidth = props.slide.width ?? 0
   const slideHeight = props.slide.height ?? 0
 
-  const width =
-    (!cover
-      ? Math.round(
-          Math.min(
-            props.rect.width,
-            (props.rect.height / slideHeight) * slideWidth
-          )
+  const width = !cover
+    ? Math.round(
+        Math.min(
+          props.rect.width,
+          (props.rect.height / slideHeight) * slideWidth
         )
-      : props.rect.width) * limitedZoom
+      )
+    : props.rect.width
 
-  const height =
-    (!cover
-      ? Math.round(
-          Math.min(
-            props.rect.height,
-            (props.rect.width / slideWidth) * slideHeight
-          )
+  const height = !cover
+    ? Math.round(
+        Math.min(
+          props.rect.height,
+          (props.rect.width / slideWidth) * slideHeight
         )
-      : props.rect.height) * limitedZoom
+      )
+    : props.rect.height
 
   const [src, setSrc] = useState(props.slide.src)
 
@@ -59,10 +55,11 @@ export function NextJsImage(props: RenderSlideProps): ReactNode {
         fill
         alt={`${src} Bild`}
         src={src}
+        loading="eager"
         onError={() => setSrc('/images/misc/placeholder.svg')}
         draggable={false}
         style={{ objectFit: cover ? 'cover' : 'contain' }}
-        quality={zoom <= 1 ? '75' : '100'}
+        quality={'100'}
         sizes={
           typeof window !== 'undefined'
             ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
