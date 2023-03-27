@@ -45,3 +45,12 @@ export function NextJsImage(slide: SlideImage, offset: number, rect: ContainerRe
     </div>
   )
 }
+
+/*
+The provided code is a TypeScript function called NextJsImage that is used to render an image component
+for a React lightbox library. The function takes three arguments: slide, offset, and rect.
+The slide argument is an object of type SlideImage, which contains information about the image to be displayed.
+The offset argument is a number that represents the position of the image in the gallery.
+The rect argument is an object of type ContainerRect, which represents the dimensions of the container element
+that the image will be displayed in.
+*/

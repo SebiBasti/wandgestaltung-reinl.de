@@ -7,7 +7,7 @@ export default function Navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll) // comment 1
   })
 
   function handleScroll() {
@@ -34,3 +34,9 @@ export default function Navbar() {
     </>
   )
 }
+
+/* comment 1
+The return statement is used to remove the event listener when the component unmounts or is re-rendered.
+This is necessary to prevent memory leaks and potential performance issues.
+The returned function is called a "cleanup function", and it should undo any effects that the main function has caused.
+ */

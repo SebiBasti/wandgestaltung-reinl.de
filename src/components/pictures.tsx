@@ -14,7 +14,10 @@ import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 import { Lightbox as StaticLightbox } from 'yet-another-react-lightbox'
 
 const Lightbox = dynamic<React.ComponentProps<typeof StaticLightbox>>(
-    () => import('yet-another-react-lightbox')
+  () => import('yet-another-react-lightbox'),
+  {
+    ssr: false
+  }
 )
 
 export function Pictures() {

@@ -4,9 +4,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "~images/*": ["public/images/*"],
-      "~images": ["public/images"],
-      "~types/*": ["types/*"],
-      "~types": ["types"]
+      "~images": ["public/images"]
     },
     "lib": [
       "dom",
