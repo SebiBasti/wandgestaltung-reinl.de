@@ -1,17 +1,9 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import main from '@/styles/main.module.scss'
-import Logo from '@/components/logo'
-import Contact from '@/components/contact'
-import Profile from '@/components/profile'
-import Pictures from '@/components/pictures'
-import Career from '@/components/career'
-import Imprint from "@/components/imprint"
-import Footer from "@/components/footer"
-import References from '@/components/references'
-import ScrollButton from '@/components/scrollButton'
+import { Logo, Contact, Profile, Pictures, Career, Imprint, Footer, References, ScrollButton } from '@/components'
 
-const Navbar = dynamic(() => import("@/components/navbar"), {
+const Navbar = dynamic(() => import('@/components/navbar'), {
   ssr: false
 })
 

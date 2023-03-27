@@ -3,7 +3,7 @@ import utils from '@/styles/utils.module.scss'
 import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import { picturesArr } from '~images/references/imageIndex'
-import NextJsImage from '@/utils/NextJsImage'
+import { NextJsImage } from '@/utils'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import React, { useState } from 'react'
@@ -17,7 +17,7 @@ const Lightbox = dynamic<React.ComponentProps<typeof StaticLightbox>>(
     () => import('yet-another-react-lightbox')
 )
 
-export default function Pictures() {
+export function Pictures() {
   const [open, setOpen] = useState<boolean>(false)
   const [slides, setSlides] = useState<HTMLImageElement[]>([])
   const [interactive, setInteractive] = useState<boolean>(false)

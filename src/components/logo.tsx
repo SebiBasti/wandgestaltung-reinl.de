@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import logo from '@/styles/logo.module.scss'
 
-export default function Logo() {
+export function Logo() {
   return (
     <header className={ logo.container }>
       <Image

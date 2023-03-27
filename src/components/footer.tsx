@@ -1,7 +1,7 @@
 import footer from '@/styles/footer.module.scss'
 import Link from "next/link"
 
-export default function Footer() {
+export function Footer() {
   return (
     <section className={ footer.container }>
       <p>Fullstack Web Development Sebastian Remm:&nbsp;</p>

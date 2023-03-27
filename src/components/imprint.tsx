@@ -2,7 +2,7 @@ import Link from 'next/link'
 import imprint from '@/styles/imprint.module.scss'
 import utils from '@/styles/utils.module.scss'
 
-export default function Imprint() {
+export function Imprint() {
   return (
     <section className={ `${imprint.container} ${utils['border-bottom']}` } id="imprint">
       <h2>Impressum:</h2>

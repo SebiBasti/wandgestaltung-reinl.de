@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { ReactNode, useState } from 'react'
 import { ContainerRect, SlideImage } from 'yet-another-react-lightbox'
 
-export default function NextJsImage(slide: SlideImage, offset: number, rect: ContainerRect): ReactNode {
+export function NextJsImage(slide: SlideImage, offset: number, rect: ContainerRect): ReactNode {
   const slideWidth = slide.width ?? 0
   const slideHeight = slide.height ?? 0
 

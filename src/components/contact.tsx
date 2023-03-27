@@ -3,7 +3,7 @@ import Link from 'next/link'
 import contact from '@/styles/contact.module.scss'
 import utils from '@/styles/utils.module.scss'
 
-export default function Contact() {
+export function Contact() {
   return (
     <section className={ `${contact.container} ${utils['border-bottom']}` } id="contact">
       <Link

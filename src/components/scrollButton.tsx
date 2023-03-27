@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Image from "next/image"
 import scrollButton from '@/styles/scrollButton.module.scss'
 
-export default function ScrollButton() {
+export function ScrollButton() {
   const [isVisible, setIsVisible] = useState(false)
 
   const toggleVisibility = () => {
