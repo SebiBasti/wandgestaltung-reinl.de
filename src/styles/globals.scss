@@ -1,14 +1,16 @@
 // Colors
 
 :root {
-  --white: rgb(239,239,239);
-  --white-transparent: rgba(239,239,239,.5);
-  --grey: rgb(69,69,69);
-  --black: rgb(18,18,18);
-  --black-transparent: rgba(18,18,18, .5);
-  --blue: rgb(0,116,188);
-  --yellow: rgb(255,203,5);
-  --red: rgb(213,34,44);
+  --white: rgb(239, 239, 239);
+  --white-transparent: rgba(239, 239, 239, 0.5);
+  --white-dark-transparent: rgba(239, 239, 239, 0.8);
+  --grey: rgb(69, 69, 69);
+  --black: rgb(18, 18, 18);
+  --black-transparent: rgba(18, 18, 18, 0.5);
+  --black-dark-transparent: rgba(18, 18, 18, 0.8);
+  --blue: rgb(0, 116, 188);
+  --yellow: rgb(255, 203, 5);
+  --red: rgb(213, 34, 44);
 }
 
 body {
@@ -38,7 +40,8 @@ img {
 }
 
 // Correct offset of anchor tags
-*, html {
+*,
+html {
   scroll-padding-top: 55px;
   scroll-behavior: smooth;
 }
@@ -47,6 +50,21 @@ img {
   html {
     scroll-padding-top: 75px;
   }
+}
+
+// custom Lightbox colors
+.yarl__root {
+  --yarl__color_backdrop: var(--black-dark-transparent);
+  --yarl__thumbnails_thumbnail_background: var(--black-transparent);
+}
+
+.yarl__thumbnails_thumbnail {
+  border-color: var(--black-dark-transparent) !important;
+  box-shadow: 0 0 3px var(--white-transparent);
+}
+
+.yarl__thumbnails_thumbnail_active {
+  border-color: var(--white-dark-transparent) !important;
 }
 
 // CSS Reset from: https://andy-bell.co.uk/a-modern-css-reset/
@@ -59,7 +77,16 @@ img {
 }
 
 /* Remove default margin */
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
@@ -87,13 +114,17 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img, picture {
+img,
+picture {
   max-width: 100%;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 

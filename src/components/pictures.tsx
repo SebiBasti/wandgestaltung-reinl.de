@@ -1,4 +1,6 @@
 import { Lightbox as StaticLightbox } from 'yet-another-react-lightbox'
+import Counter from 'yet-another-react-lightbox/plugins/counter'
+import 'yet-another-react-lightbox/plugins/counter.css'
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
@@ -9,7 +11,7 @@ import { picturesArr } from '~images/references/imageIndex'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 
-import React, { useState } from 'react'
+import React, { createContext, useState } from 'react'
 
 import { NextJsImage } from '@/utils'
 
@@ -27,6 +29,7 @@ export function Pictures() {
   const [open, setOpen] = useState<boolean>(false)
   const [slides, setSlides] = useState<HTMLImageElement[]>([])
   const [interactive, setInteractive] = useState<boolean>(false)
+  const zoomContext = createContext<number>(1)
 
   return (
     <section
@@ -65,11 +68,13 @@ export function Pictures() {
           close={() => setOpen(false)}
           slides={slides}
           render={{ slide: NextJsImage }}
-          plugins={[Fullscreen, Zoom, Thumbnails]}
+          plugins={[Fullscreen, Zoom, Thumbnails, Counter]}
           zoom={{
             maxZoomPixelRatio: 1,
             zoomInMultiplier: 2,
           }}
+          thumbnails={{ vignette: false, imageFit: 'cover' }}
+          counter={{ style: { top: 'unset', bottom: 0 } }}
         />
       )}
     </section>

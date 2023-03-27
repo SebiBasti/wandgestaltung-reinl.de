@@ -1,25 +1,44 @@
-import { ContainerRect, SlideImage } from 'yet-another-react-lightbox'
+import { RenderSlideProps } from 'yet-another-react-lightbox'
+import {
+  isImageFitCover,
+  isImageSlide,
+  useLightboxProps,
+} from 'yet-another-react-lightbox/core'
 
 import Image from 'next/image'
 
 import { ReactNode, useState } from 'react'
 
-export function NextJsImage(
-  slide: SlideImage,
-  offset: number,
-  rect: ContainerRect
-): ReactNode {
-  const slideWidth = slide.width ?? 0
-  const slideHeight = slide.height ?? 0
+export function NextJsImage(props: RenderSlideProps): ReactNode {
+  const { imageFit } = useLightboxProps().carousel
+  const cover =
+    isImageSlide(props.slide) && isImageFitCover(props.slide, imageFit)
+  const zoom = Math.round(props.zoom ?? 1)
+  const limitedZoom = zoom <= 4 ? zoom : 4
+  const slideWidth = props.slide.width ?? 0
+  const slideHeight = props.slide.height ?? 0
 
-  const width = Math.round(
-    Math.min(rect.width, (rect.height / slideHeight) * slideWidth)
-  )
-  const height = Math.round(
-    Math.min(rect.height, (rect.width / slideWidth) * slideHeight)
-  )
+  const width =
+    (!cover
+      ? Math.round(
+          Math.min(
+            props.rect.width,
+            (props.rect.height / slideHeight) * slideWidth
+          )
+        )
+      : props.rect.width) * limitedZoom
 
-  const [src, setSrc] = useState(slide.src)
+  const height =
+    (!cover
+      ? Math.round(
+          Math.min(
+            props.rect.height,
+            (props.rect.width / slideWidth) * slideHeight
+          )
+        )
+      : props.rect.height) * limitedZoom
+
+  const [src, setSrc] = useState(props.slide.src)
 
   return (
     <div style={{ position: 'relative', width, height }}>
@@ -42,6 +61,8 @@ export function NextJsImage(
         src={src}
         onError={() => setSrc('/images/misc/placeholder.svg')}
         draggable={false}
+        style={{ objectFit: cover ? 'cover' : 'contain' }}
+        quality={zoom <= 1 ? '75' : '100'}
         sizes={
           typeof window !== 'undefined'
             ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
