@@ -1,13 +1,13 @@
 import navbar from '@/styles/navbar.module.scss'
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 export default function Navbar() {
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll) // comment 1
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll) // comment 1
   })
 
   function handleScroll() {
@@ -19,16 +19,28 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={ `${visible ? navbar.visible : ''} ${navbar.container}` }>
+      <nav className={`${visible ? navbar.visible : ''} ${navbar.container}`}>
         <span>
-          <Link href={ '#contact' } scroll={ false }>Kontakt</Link>
-          <Link href={ '#profile' } scroll={ false }>Profil</Link>
-          <Link href={ '#pictures' } scroll={ false }>Bilder</Link>
+          <Link href={'#contact'} scroll={false}>
+            Kontakt
+          </Link>
+          <Link href={'#profile'} scroll={false}>
+            Profil
+          </Link>
+          <Link href={'#pictures'} scroll={false}>
+            Bilder
+          </Link>
         </span>
         <span>
-          <Link href={ '#references' } scroll={ false }>Referenzen</Link>
-          <Link href={ '#career' } scroll={ false }>Laufbahn</Link>
-          <Link href={ '#imprint' } scroll={ false }>Impressum</Link>
+          <Link href={'#references'} scroll={false}>
+            Referenzen
+          </Link>
+          <Link href={'#career'} scroll={false}>
+            Laufbahn
+          </Link>
+          <Link href={'#imprint'} scroll={false}>
+            Impressum
+          </Link>
         </span>
       </nav>
     </>

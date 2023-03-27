@@ -3,7 +3,10 @@ import utils from '@/styles/utils.module.scss'
 
 export function References() {
   return (
-    <section className={ `${references.container} ${utils['border-bottom']}` } id="references">
+    <section
+      className={`${references.container} ${utils['border-bottom']}`}
+      id="references"
+    >
       <h2>Referenzen:</h2>
       <h3>Risssanierungen</h3>
       <p>• Helma AG</p>

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import Image from "next/image"
 import scrollButton from '@/styles/scrollButton.module.scss'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export function ScrollButton() {
   const [isVisible, setIsVisible] = useState(false)
@@ -26,17 +26,17 @@ export function ScrollButton() {
   }, []) // comment 2
 
   return (
-    <div className={ scrollButton.container }>
+    <div className={scrollButton.container}>
       <button
         type="button"
         onClick={scrollToTop}
-        className={ isVisible ? scrollButton.visible : scrollButton.invisible }
+        className={isVisible ? scrollButton.visible : scrollButton.invisible}
       >
         <Image
-          src={ '/images/misc/arrow_up.svg' }
-          alt={ 'scroll nach oben Icon' }
-          width={ 30 }
-          height={ 30 }
+          src={'/images/misc/arrow_up.svg'}
+          alt={'scroll nach oben Icon'}
+          width={30}
+          height={30}
         />
       </button>
     </div>

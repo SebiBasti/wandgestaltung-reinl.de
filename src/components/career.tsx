@@ -3,7 +3,10 @@ import utils from '@/styles/utils.module.scss'
 
 export function Career() {
   return (
-    <section className={ `${career.container} ${utils['border-bottom']}` } id="career">
+    <section
+      className={`${career.container} ${utils['border-bottom']}`}
+      id="career"
+    >
       <h2>Laufbahn:</h2>
       <table>
         <tbody>

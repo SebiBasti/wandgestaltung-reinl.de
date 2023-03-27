@@ -1,10 +1,13 @@
-import Link from 'next/link'
 import imprint from '@/styles/imprint.module.scss'
 import utils from '@/styles/utils.module.scss'
+import Link from 'next/link'
 
 export function Imprint() {
   return (
-    <section className={ `${imprint.container} ${utils['border-bottom']}` } id="imprint">
+    <section
+      className={`${imprint.container} ${utils['border-bottom']}`}
+      id="imprint"
+    >
       <h2>Impressum:</h2>
       <h3>Angaben gemäß § 5 TMG</h3>
       <p>Daniel Reinl</p>
@@ -20,7 +23,9 @@ export function Imprint() {
       <h3>Angaben zur Berufshaftpflichtversicherung</h3>
       <p>Name des Versicherers:</p>
       <p>Signal Iduna</p>
-      <Link href={ 'https://www.e-recht24.de/impressum-generator.htm' }>Quelle</Link>
+      <Link href={'https://www.e-recht24.de/impressum-generator.htm'}>
+        Quelle
+      </Link>
     </section>
   )
 }
