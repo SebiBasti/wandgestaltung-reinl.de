@@ -11,8 +11,9 @@ import { picturesArr } from '~images/references/imageIndex'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 
-import React, { createContext, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
+import { useDebounce, useWindowDimensions } from '@/utils'
 import { NextJsImage } from '@/utils'
 
 import pictures from '@/styles/pictures.module.scss'
@@ -27,9 +28,27 @@ const Lightbox = dynamic<React.ComponentProps<typeof StaticLightbox>>(
 
 export function Pictures() {
   const [open, setOpen] = useState<boolean>(false)
-  const [slides, setSlides] = useState<HTMLImageElement[]>([])
   const [interactive, setInteractive] = useState<boolean>(false)
-  const zoomContext = createContext<number>(1)
+  const [loaded, setLoaded] = useState<boolean>(false)
+  const [slides, setSlides] = useState<HTMLImageElement[]>([])
+  const { height, width } = useWindowDimensions()
+  const debouncedHeight = useDebounce(height)
+  const ref = useRef<any>(null)
+
+  const toggleThumbnails = () => {
+    if (ref.current !== null) {
+      ;((debouncedHeight ?? 0) <= 400
+        ? ref.current?.hide
+        : ref.current?.show)?.()
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      toggleThumbnails()
+    })
+    loaded && toggleThumbnails()
+  }, [debouncedHeight, toggleThumbnails])
 
   return (
     <section
@@ -73,8 +92,17 @@ export function Pictures() {
             maxZoomPixelRatio: 2,
             zoomInMultiplier: 2,
           }}
-          thumbnails={{ vignette: false, imageFit: 'cover' }}
+          thumbnails={{
+            vignette: false,
+            imageFit: 'cover',
+            showToggle: true,
+            ref: ref,
+          }}
           counter={{ style: { top: 'unset', bottom: 0 } }}
+          on={{
+            entering: () => setLoaded(true),
+            exiting: () => setLoaded(false),
+          }}
         />
       )}
     </section>
