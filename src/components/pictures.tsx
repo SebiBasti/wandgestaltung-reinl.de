@@ -1,9 +1,3 @@
-import pictures from '@/styles/pictures.module.scss'
-import utils from '@/styles/utils.module.scss'
-import { NextJsImage } from '@/utils'
-import dynamic from 'next/dynamic'
-import Image from 'next/image'
-import React, { useState } from 'react'
 import { Lightbox as StaticLightbox } from 'yet-another-react-lightbox'
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
@@ -11,6 +5,16 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/styles.css'
 import { picturesArr } from '~images/references/imageIndex'
+
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
+
+import React, { useState } from 'react'
+
+import { NextJsImage } from '@/utils'
+
+import pictures from '@/styles/pictures.module.scss'
+import utils from '@/styles/utils.module.scss'
 
 const Lightbox = dynamic<React.ComponentProps<typeof StaticLightbox>>(
   () => import('yet-another-react-lightbox'),

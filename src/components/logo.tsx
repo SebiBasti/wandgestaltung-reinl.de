@@ -1,5 +1,6 @@
-import logo from '@/styles/logo.module.scss'
 import Image from 'next/image'
+
+import logo from '@/styles/logo.module.scss'
 
 export function Logo() {
   return (

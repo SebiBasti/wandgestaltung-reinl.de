@@ -1,6 +1,7 @@
+import Image from 'next/image'
+
 import profile from '@/styles/profile.module.scss'
 import utils from '@/styles/utils.module.scss'
-import Image from 'next/image'
 
 export function Profile() {
   return (

@@ -1,6 +1,8 @@
-import scrollButton from '@/styles/scrollButton.module.scss'
 import Image from 'next/image'
+
 import { useEffect, useState } from 'react'
+
+import scrollButton from '@/styles/scrollButton.module.scss'
 
 export function ScrollButton() {
   const [isVisible, setIsVisible] = useState(false)

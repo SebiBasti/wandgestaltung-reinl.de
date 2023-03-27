@@ -3,7 +3,14 @@
   "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
-  "importOrder": ["^components/(.*)$", "^[./]"],
+  "importOrder": [
+    "^next/(.*)$",
+    "^@/components/(.*)$",
+    "^react$",
+    "^@/utils$",
+    "@/styles/(.*)$",
+    "^[./]"
+  ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }

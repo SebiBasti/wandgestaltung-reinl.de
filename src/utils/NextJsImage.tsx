@@ -1,8 +1,14 @@
-import Image from 'next/image'
-import { ReactNode, useState } from 'react'
 import { ContainerRect, SlideImage } from 'yet-another-react-lightbox'
 
-export function NextJsImage(slide: SlideImage, offset: number, rect: ContainerRect): ReactNode {
+import Image from 'next/image'
+
+import { ReactNode, useState } from 'react'
+
+export function NextJsImage(
+  slide: SlideImage,
+  offset: number,
+  rect: ContainerRect
+): ReactNode {
   const slideWidth = slide.width ?? 0
   const slideHeight = slide.height ?? 0
 
@@ -18,24 +24,24 @@ export function NextJsImage(slide: SlideImage, offset: number, rect: ContainerRe
   return (
     <div style={{ position: 'relative', width, height }}>
       <Image
-        alt={ 'loading animation' }
-        src={ '/images/misc/loading.svg' }
-        width={ 80 }
-        height={ 80 }
+        alt={'loading animation'}
+        src={'/images/misc/loading.svg'}
+        width={80}
+        height={80}
         style={{
           left: '50%',
           position: 'absolute',
           top: '50%',
-          transform: 'translate(-50%, -50%)'
+          transform: 'translate(-50%, -50%)',
         }}
         priority
       />
       <Image
         fill
-        alt={ `${src} Bild` }
-        src={ src }
+        alt={`${src} Bild`}
+        src={src}
         onError={() => setSrc('/images/misc/placeholder.svg')}
-        draggable={ false }
+        draggable={false}
         sizes={
           typeof window !== 'undefined'
             ? `${Math.ceil((width / window.innerWidth) * 100)}vw`

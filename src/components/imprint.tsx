@@ -1,6 +1,7 @@
+import Link from 'next/link'
+
 import imprint from '@/styles/imprint.module.scss'
 import utils from '@/styles/utils.module.scss'
-import Link from 'next/link'
 
 export function Imprint() {
   return (

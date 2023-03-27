@@ -1,7 +1,8 @@
-import contact from '@/styles/contact.module.scss'
-import utils from '@/styles/utils.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import contact from '@/styles/contact.module.scss'
+import utils from '@/styles/utils.module.scss'
 
 export function Contact() {
   return (

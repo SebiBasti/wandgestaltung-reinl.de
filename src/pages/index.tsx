@@ -9,9 +9,11 @@ import {
   References,
   ScrollButton,
 } from '@/components'
-import main from '@/styles/main.module.scss'
+
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+
+import main from '@/styles/main.module.scss'
 
 const Navbar = dynamic(() => import('@/components/navbar'), {
   ssr: false,

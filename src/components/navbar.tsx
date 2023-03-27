@@ -1,6 +1,8 @@
-import navbar from '@/styles/navbar.module.scss'
 import Link from 'next/link'
+
 import { useEffect, useState } from 'react'
+
+import navbar from '@/styles/navbar.module.scss'
 
 export default function Navbar() {
   const [visible, setVisible] = useState(true)
