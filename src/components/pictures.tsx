@@ -97,7 +97,6 @@ export function Pictures() {
         thumbnails={{
           vignette: false,
           imageFit: 'cover',
-          showToggle: true,
           ref: ref
         }}
         counter={{ style: { top: 'unset', bottom: 0 } }}
