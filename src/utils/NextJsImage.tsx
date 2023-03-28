@@ -2,7 +2,7 @@ import { RenderSlideProps } from 'yet-another-react-lightbox'
 import {
   isImageFitCover,
   isImageSlide,
-  useLightboxProps,
+  useLightboxProps
 } from 'yet-another-react-lightbox/core'
 
 import Image from 'next/image'
@@ -47,7 +47,7 @@ export function NextJsImage(props: RenderSlideProps): ReactNode {
           left: '50%',
           position: 'absolute',
           top: '50%',
-          transform: 'translate(-50%, -50%)',
+          transform: 'translate(-50%, -50%)'
         }}
         priority
       />

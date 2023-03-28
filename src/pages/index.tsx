@@ -7,7 +7,7 @@ import {
   Pictures,
   Profile,
   References,
-  ScrollButton,
+  ScrollButton
 } from '@/components'
 
 import dynamic from 'next/dynamic'
@@ -16,7 +16,7 @@ import Head from 'next/head'
 import main from '@/styles/main.module.scss'
 
 const Navbar = dynamic(() => import('@/components/navbar'), {
-  ssr: false,
+  ssr: false
 })
 
 export default function Home() {
