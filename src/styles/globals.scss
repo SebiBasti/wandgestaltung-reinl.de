@@ -1,5 +1,4 @@
 // Colors
-
 :root {
   --white: rgb(239, 239, 239);
   --white-transparent: rgba(239, 239, 239, 0.5);
@@ -23,7 +22,6 @@ body {
 }
 
 // Own CSS Reset
-
 a {
   color: var(--grey);
   text-decoration: none;
@@ -34,7 +32,6 @@ a {
 }
 
 // Smoother image corners
-
 img {
   border-radius: 2px;
 }
