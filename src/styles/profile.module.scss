@@ -8,32 +8,31 @@
   }
 
   .content {
-    width: 61.8%;
     padding-left: 1em;
+    width: 61.8%;
 
     .header {
       display: flex;
-      font-size: .9em;
       margin-bottom: 1em;
+      font-size: 0.9em;
     }
 
     .body {
-
       h2 {
+        margin-bottom: 0.5em;
         font-size: 1em;
-        margin-bottom: .5em;
       }
 
       p {
-        font-size: .9em;
+        font-size: 0.9em;
 
         &:nth-child(2n) {
           font-weight: bold;
         }
 
-        &:nth-child(2n+1) {
+        &:nth-child(2n + 1) {
+          padding-bottom: 0.5em;
           padding-left: 1em;
-          padding-bottom: .5em;
         }
 
         &:last-child {
@@ -46,9 +45,7 @@
 
 @media screen and (min-width: 574px) and (max-width: 864px) {
   .container {
-
     .content {
-
       .header {
         display: block;
       }
@@ -61,18 +58,18 @@
     display: block;
 
     .image-container {
+      margin-bottom: 0.5em;
       width: 100%;
       height: 300px;
-      margin-bottom: .5em;
     }
 
     .content {
-      width: 100%;
       padding-left: 0;
+      width: 100%;
 
       .header {
-        font-size: .77em;
         display: block;
+        font-size: 0.77em;
       }
     }
   }

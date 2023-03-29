@@ -1,7 +1,7 @@
 .container {
   position: relative;
-  height: clamp(45px, calc(16vw), 135px);
   margin-bottom: 2em;
+  height: clamp(45px, calc(16vw), 135px);
 }
 
 @media screen and (max-width: 480px) {

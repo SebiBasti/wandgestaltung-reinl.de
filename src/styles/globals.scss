@@ -25,8 +25,8 @@ body {
 // Own CSS Reset
 
 a {
-  text-decoration: none;
   color: var(--grey);
+  text-decoration: none;
 
   &:hover {
     color: var(--black);
@@ -36,14 +36,15 @@ a {
 // Smoother image corners
 
 img {
+  box-shadow: 0 0 2px var(--black);
   border-radius: 2px;
 }
 
 // Correct offset of anchor tags
 *,
 html {
-  scroll-padding-top: 55px;
   scroll-behavior: smooth;
+  scroll-padding-top: 55px;
 }
 
 @media screen and (max-width: 480px) {
@@ -59,8 +60,8 @@ html {
 }
 
 .yarl__thumbnails_thumbnail {
-  border-color: var(--black-dark-transparent) !important;
   box-shadow: 0 0 3px var(--white-transparent);
+  border-color: var(--black-dark-transparent) !important;
 }
 
 .yarl__thumbnails_thumbnail_active {
@@ -104,8 +105,8 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
 /* A elements that don't have a class get default styles */
@@ -116,8 +117,8 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */

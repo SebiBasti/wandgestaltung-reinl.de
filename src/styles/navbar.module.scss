@@ -1,32 +1,32 @@
 .container {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
-  height: 50px;
-  width: 100vw;
-  background-color: var(--white);
-  opacity: 100;
-  transition: opacity .5s ease;
-  display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 100;
+  z-index: 1;
+  transition: opacity 0.5s ease;
   border-bottom: 2px solid var(--blue);
+  background-color: var(--white);
+  width: 100vw;
+  height: 50px;
 
   a {
-    margin: 0 .5em;
+    margin: 0 0.5em;
   }
 }
 
 .visible {
   opacity: 0;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 }
 
 @media screen and (max-width: 480px) {
   .container {
     flex-wrap: wrap;
+    padding: 0.5em;
     height: 70px;
-    padding: .5em;
   }
 }

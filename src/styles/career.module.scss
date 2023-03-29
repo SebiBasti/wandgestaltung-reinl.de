@@ -1,22 +1,21 @@
 .container {
-
   h2 {
+    margin-bottom: 0.5em;
     font-size: 1em;
-    margin-bottom: .5em;
   }
 
   table {
     border-collapse: collapse;
 
     tr {
-      font-size: .9em;
+      font-size: 0.9em;
 
       td:first-child {
         font-weight: bold;
       }
 
       td:last-child {
-        padding-left: .5em;
+        padding-left: 0.5em;
       }
     }
   }
