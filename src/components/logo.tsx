@@ -9,7 +9,6 @@ export function Logo() {
         src={'/images/misc/logo.svg'}
         alt="Logo Wandgestaltung Reinl"
         fill
-        priority
       />
     </header>
   )

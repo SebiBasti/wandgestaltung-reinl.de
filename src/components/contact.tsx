@@ -12,12 +12,7 @@ export function Contact() {
     >
       <Link href={'tel:+49-179-111-0046'} className={contact.link}>
         <div className={contact['image-container']}>
-          <Image
-            src={'/images/misc/phone.svg'}
-            alt="Icon Telefon"
-            fill
-            priority
-          />
+          <Image src={'/images/misc/phone.svg'} alt="Icon Telefon" fill />
         </div>
         <p>+49 179 111 0046</p>
       </Link>
@@ -26,7 +21,7 @@ export function Contact() {
         className={contact.link}
       >
         <div className={contact['image-container']}>
-          <Image src={'/images/misc/mail.svg'} alt="Icon Email" fill priority />
+          <Image src={'/images/misc/mail.svg'} alt="Icon Email" fill />
         </div>
         <p>mail@wandgestaltung-reinl.de</p>
       </Link>
