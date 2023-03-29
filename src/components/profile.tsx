@@ -14,7 +14,10 @@ export function Profile() {
           src={'/images/misc/profile.png'}
           alt="Profil Bild Daniel Reinl"
           style={{ objectFit: 'cover' }}
-          sizes={'90vw'}
+          sizes={
+            '(max-width: 573px) calc(100vw - 4rem), ' +
+            'calc((100vw - 4rem) * 0.382)'
+          }
           fill
           priority
         />

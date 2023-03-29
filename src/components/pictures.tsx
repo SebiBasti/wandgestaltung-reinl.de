@@ -73,14 +73,14 @@ export function Pictures() {
             src={el.image}
             alt={`${el.description} Bildergalerie`}
             style={{ objectFit: 'cover' }}
-            sizes={'75vw'}
+            sizes={'(max-width: 573px) calc(100vw - 4rem), calc(50vw - 2.5rem)'}
             fill
           />
           <p>{el.description}</p>
         </button>
       )
     })
-  }, [state, picturesArr])
+  }, [state])
 
   const lightboxElement = useMemo(() => {
     return (
@@ -106,7 +106,7 @@ export function Pictures() {
         }}
       />
     )
-  }, [state, NextJsImage, ref])
+  }, [state, ref])
 
   return (
     <section
