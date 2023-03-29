@@ -16,7 +16,8 @@ export function Profile() {
           style={{ objectFit: 'cover' }}
           sizes={
             '(max-width: 573px) calc(100vw - 4rem), ' +
-            'calc((100vw - 4rem) * 0.382)'
+            '(max-width: calc(800px + 4rem)) calc((100vw - 4rem) * 0.382)' +
+            '305px'
           }
           fill
           priority

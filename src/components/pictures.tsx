@@ -73,7 +73,9 @@ export function Pictures() {
             src={el.image}
             alt={`${el.description} Bildergalerie`}
             style={{ objectFit: 'cover' }}
-            sizes={'(max-width: 573px) calc(100vw - 4rem), calc(50vw - 2.5rem)'}
+            sizes={
+              '(max-width: 573px) calc(100vw - 4rem), (max-width: calc(800px + 4rem)) calc(50vw - 2.5rem), 392px'
+            }
             fill
           />
           <p>{el.description}</p>
