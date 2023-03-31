@@ -1,5 +1,5 @@
 export * from './importAll'
 export * from './NextJsImage'
-export * from './useWindowDimension'
-export * from './useDebounce'
 export * from './customLightboxState'
+export * from './toggleThumbnails'
+export * from './lightboxElement'

@@ -8,9 +8,9 @@
     "^@/components/(.*)$",
     "^react$",
     "^@/utils$",
-    "~images/(.*)$",
-    "@/styles/(.*)$",
-    "^[./]"
+    "^.*.s?css$",
+    "^~images/(.*)$",
+    "^[./]$"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true

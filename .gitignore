@@ -32,12 +32,8 @@ yarn-error.log*
 .vercel
 
 # .idea files
-/.idea/jsLibraryMappings.xml
-/.idea/vcs.xml
-/.idea/inspectionProfiles/Project_Default.xml
+/.idea/*
 
 # Next.js typescript config file
 next-env.d.ts
-/.idea/codeStyles/codeStyleConfig.xml
-/.idea/prettier.xml
-/.idea/codeStyles/Project.xml
+
