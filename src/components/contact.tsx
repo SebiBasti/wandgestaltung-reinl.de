@@ -9,6 +9,7 @@ export function Contact() {
     <section
       className={`${contact.container} ${utils['border-bottom']}`}
       id="contact"
+      aria-label="Kontakt"
     >
       <Link href={'tel:+49-179-111-0046'} className={contact.link}>
         <div className={contact['image-container']}>

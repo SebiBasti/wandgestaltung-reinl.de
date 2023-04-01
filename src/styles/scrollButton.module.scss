@@ -1,24 +1,23 @@
-.container {
+.scroll-button {
   position: fixed;
-  right: calc(50vw - 400px - 2em);
+  right: calc(50vw - 400px - 3em);
   bottom: 1em;
-  cursor: pointer;
-
-  button {
-    all: unset;
-  }
-
-  .visible {
-    opacity: 100;
-  }
-
-  .invisible {
-    opacity: 0;
-  }
+  opacity: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
 }
 
-@media screen and (max-width: 865px) {
-  .container {
+.visible {
+  opacity: 100;
+}
+
+@media screen and (max-width: 900px) {
+  .scroll-button {
     right: 0;
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }

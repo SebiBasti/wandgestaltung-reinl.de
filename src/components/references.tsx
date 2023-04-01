@@ -6,6 +6,7 @@ export function References() {
     <section
       className={`${references.container} ${utils['border-bottom']}`}
       id="references"
+      aria-label="Referenzen"
     >
       <h2>Referenzen:</h2>
       <h3>Risssanierungen</h3>

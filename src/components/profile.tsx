@@ -8,6 +8,7 @@ export function Profile() {
     <section
       className={`${profile.container} ${utils['border-bottom']}`}
       id="profile"
+      aria-label="Profil"
     >
       <div className={profile['image-container']}>
         <Image
@@ -24,10 +25,7 @@ export function Profile() {
         />
       </div>
       <div className={profile.content}>
-        <span className={profile.header}>
-          <h1>Exklusive Malerarbeiten&nbsp;</h1>
-          <h1>seit 2004</h1>
-        </span>
+        <h1 id={'page-title'}>Exklusive&nbsp;Malerarbeiten seit&nbsp;2004</h1>
         <span className={profile.body}>
           <h2>Leistungen:</h2>
           <p>• Tapezierarbeiten aller Art</p>

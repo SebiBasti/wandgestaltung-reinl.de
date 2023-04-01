@@ -97,6 +97,7 @@ export function Pictures() {
     <section
       className={`${pictures.container} ${utils['border-bottom']}`}
       id="pictures"
+      aria-label="Bildergalerie"
     >
       <noscript>
         <h3 className={pictures.noscript}>
