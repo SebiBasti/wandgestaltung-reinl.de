@@ -7,6 +7,7 @@ export function References() {
       className={`${references.container} ${utils['border-bottom']}`}
       id="references"
       aria-label="Referenzen"
+      tabIndex={0}
     >
       <h2>Referenzen:</h2>
       <h3>Risssanierungen</h3>

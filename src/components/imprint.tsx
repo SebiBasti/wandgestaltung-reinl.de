@@ -9,6 +9,7 @@ export function Imprint() {
       className={`${imprint.container} ${utils['border-bottom']}`}
       id="imprint"
       aria-label="Impressum"
+      tabIndex={0}
     >
       <h2>Impressum:</h2>
       <h3>Angaben gemäß § 5 TMG</h3>
