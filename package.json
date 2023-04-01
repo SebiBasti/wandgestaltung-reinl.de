@@ -1,6 +1,6 @@
 {
   "name": "wandgestaltung-reinl.de",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -19,7 +19,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.59.2",
-    "sharp": "^0.31.3",
     "use-debounce": "^9.0.3",
     "yet-another-react-lightbox": "^3.2.0"
   },
