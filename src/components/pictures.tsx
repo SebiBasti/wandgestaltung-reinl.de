@@ -98,6 +98,7 @@ export function Pictures() {
       className={`${pictures.container} ${utils['border-bottom']}`}
       id="pictures"
       aria-label="Bildergalerie"
+      tabIndex={0}
     >
       <noscript>
         <h3 className={pictures.noscript}>

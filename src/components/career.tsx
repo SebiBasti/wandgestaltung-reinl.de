@@ -6,10 +6,10 @@ export function Career() {
     <section
       className={`${career.container} ${utils['border-bottom']}`}
       id="career"
-      aria-label="Laufbahn"
+      aria-labelledby={'career-title'}
       tabIndex={0}
     >
-      <h2>Laufbahn:</h2>
+      <h2 id={'career-title'}>Laufbahn:</h2>
       <table>
         <tbody>
           <tr>

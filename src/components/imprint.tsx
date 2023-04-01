@@ -8,10 +8,10 @@ export function Imprint() {
     <section
       className={`${imprint.container} ${utils['border-bottom']}`}
       id="imprint"
-      aria-label="Impressum"
+      aria-labelledby={'imprint-title'}
       tabIndex={0}
     >
-      <h2>Impressum:</h2>
+      <h2 id={'imprint-title'}>Impressum:</h2>
       <h3>Angaben gemäß § 5 TMG</h3>
       <p>Daniel Reinl</p>
       <p>Wandgestaltung Reinl</p>
