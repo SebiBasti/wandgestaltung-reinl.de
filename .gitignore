@@ -34,6 +34,9 @@ yarn-error.log*
 # .idea files
 /.idea/*
 
+# .husky files
+/.husky/*
+
 # Next.js typescript config file
 next-env.d.ts
 
