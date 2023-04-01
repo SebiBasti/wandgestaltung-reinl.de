@@ -1,7 +1,7 @@
 import { useDebouncedCallback } from 'use-debounce'
 
 // debounced handleScroll to prevent scroll event from firing way too often
-export const createHandleScroll = (
+export const useHandleScroll = (
   setVisible: (visible: boolean) => void
 ): (() => void) => {
   return useDebouncedCallback(

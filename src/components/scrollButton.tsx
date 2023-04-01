@@ -1,4 +1,4 @@
-import { createHandleScroll } from '@/utils/createHandleScroll'
+import { useHandleScroll } from '@/utils/useHandleScroll'
 
 import Image from 'next/image'
 
@@ -9,7 +9,7 @@ import scrollButton from '@/styles/scrollButton.module.scss'
 export function ScrollButton() {
   const [visible, setVisible] = useState<boolean>(false)
   // handleScroll uses setVisible to trigger visibility depending on scrollY
-  const handleScroll = createHandleScroll(setVisible)
+  const handleScroll = useHandleScroll(setVisible)
 
   // const toggleVisibility = () => {
   //   if (window.scrollY > 120) {
@@ -29,7 +29,7 @@ export function ScrollButton() {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  })
 
   return (
     <button

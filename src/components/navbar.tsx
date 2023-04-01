@@ -2,14 +2,14 @@ import Link from 'next/link'
 
 import { useEffect, useState } from 'react'
 
-import { createHandleScroll } from '@/utils'
+import { useHandleScroll } from '@/utils'
 
 import navbar from '@/styles/navbar.module.scss'
 
 export default function Navbar() {
   const [visible, setVisible] = useState<boolean>(false)
   // handleScroll uses setVisible to trigger visibility depending on scrollY
-  const handleScroll = createHandleScroll(setVisible)
+  const handleScroll = useHandleScroll(setVisible)
 
   // allow Keyboard users to activate navbar with a tab
   const handleTab = (event: KeyboardEvent) => {
@@ -26,7 +26,7 @@ export default function Navbar() {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('keyup', (event) => handleTab(event))
     }
-  }, [])
+  })
 
   return (
     <nav

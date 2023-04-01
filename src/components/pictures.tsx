@@ -42,7 +42,7 @@ export function Pictures() {
     return () => {
       window.removeEventListener('resize', resizeListener)
     }
-  }, [state, height])
+  }, [state, ref, toggleThumbnails, height])
 
   const pictureButtons = picturesArr.map((el, index: number) => {
     return (
