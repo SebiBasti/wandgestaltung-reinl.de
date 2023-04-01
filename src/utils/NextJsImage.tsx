@@ -1,3 +1,4 @@
+import { useDebounce } from 'use-debounce'
 import { RenderSlideProps } from 'yet-another-react-lightbox'
 import {
   isImageFitCover,
@@ -16,23 +17,31 @@ export function NextJsImage(props: RenderSlideProps): ReactNode {
   const slideWidth = props.slide.width ?? 0
   const slideHeight = props.slide.height ?? 0
 
-  const width = !cover
-    ? Math.round(
-        Math.min(
-          props.rect.width,
-          (props.rect.height / slideHeight) * slideWidth
+  const [width] = useDebounce(
+    !cover
+      ? Math.round(
+          Math.min(
+            props.rect.width,
+            (props.rect.height / slideHeight) * slideWidth
+          )
         )
-      )
-    : props.rect.width
+      : props.rect.width,
+    50,
+    { maxWait: 100 }
+  )
 
-  const height = !cover
-    ? Math.round(
-        Math.min(
-          props.rect.height,
-          (props.rect.width / slideWidth) * slideHeight
+  const [height] = useDebounce(
+    !cover
+      ? Math.round(
+          Math.min(
+            props.rect.height,
+            (props.rect.width / slideWidth) * slideHeight
+          )
         )
-      )
-    : props.rect.height
+      : props.rect.height,
+    50,
+    { maxWait: 100 }
+  )
 
   const [src, setSrc] = useState(props.slide.src)
 
@@ -69,12 +78,3 @@ export function NextJsImage(props: RenderSlideProps): ReactNode {
     </div>
   )
 }
-
-/*
-The provided code is a TypeScript function called NextJsImage that is used to render an image component
-for a React lightbox library. The function takes three arguments: slide, offset, and rect.
-The slide argument is an object of type SlideImage, which contains information about the image to be displayed.
-The offset argument is a number that represents the position of the image in the gallery.
-The rect argument is an object of type ContainerRect, which represents the dimensions of the container element
-that the image will be displayed in.
-*/
