@@ -9,7 +9,6 @@ export function Profile() {
       className={`${profile.container} ${utils['border-bottom']}`}
       id="profile"
       aria-label="Profil"
-      tabIndex={0}
     >
       <div className={profile['image-container']}>
         <Image

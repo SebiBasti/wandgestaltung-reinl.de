@@ -7,7 +7,6 @@ export function Career() {
       className={`${career.container} ${utils['border-bottom']}`}
       id="career"
       aria-labelledby={'career-title'}
-      tabIndex={0}
     >
       <h2 id={'career-title'}>Laufbahn:</h2>
       <table>
