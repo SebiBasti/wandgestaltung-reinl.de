@@ -10,14 +10,11 @@ import {
   ScrollButton
 } from '@/components'
 
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-import main from '@/styles/main.module.scss'
+import Navbar from '@/components/navbar'
 
-const Navbar = dynamic(() => import('@/components/navbar'), {
-  ssr: false
-})
+import main from '@/styles/main.module.scss'
 
 export default function Home() {
   return (
