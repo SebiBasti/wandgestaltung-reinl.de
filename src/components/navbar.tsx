@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import navbar from '@/styles/navbar.module.scss'
 
 export default function Navbar() {
-  const [invisible, setInvisible] = useState<boolean>(true)
+  const [visible, setVisible] = useState<boolean>(false)
 
   // debounced handleScroll to prevent scroll event from firing way too often
   const handleScroll = useDebouncedCallback(
@@ -16,9 +16,9 @@ export default function Navbar() {
       const currentWidth = window.innerWidth
       // different visibility depending on the navbar size on different viewport widths
       if (currentWidth <= 628) {
-        setInvisible(60 > currentYOffset)
+        setVisible(60 < currentYOffset)
       } else {
-        setInvisible(120 > currentYOffset)
+        setVisible(120 < currentYOffset)
       }
     },
     100,
@@ -28,7 +28,7 @@ export default function Navbar() {
   // allow Keyboard users to activate navbar with a tab
   const handleTab = (event: KeyboardEvent) => {
     if (event.key == 'Tab') {
-      setInvisible(false)
+      setVisible(true)
     }
   }
 
@@ -37,16 +37,14 @@ export default function Navbar() {
     window.addEventListener('keyup', (event) => handleTab(event))
     // cleanup function to prevent memory leaks etc.
     return () => {
-      window.removeEventListener('scroll', handleScroll) // comment 1
+      window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('keyup', (event) => handleTab(event))
     }
   }, [])
 
   return (
     <>
-      <nav
-        className={`${invisible ? navbar.invisible : ''} ${navbar.container}`}
-      >
+      <nav className={`${visible ? navbar.visible : ''} ${navbar.container}`}>
         <ul>
           <li>
             <Link href={'#contact'} scroll={false}>

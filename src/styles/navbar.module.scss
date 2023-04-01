@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 100;
+  opacity: 0;
   z-index: 1;
   transition: opacity 0.5s ease;
   border-bottom: 2px solid var(--blue);
@@ -22,8 +22,8 @@
   }
 }
 
-.invisible {
-  opacity: 0;
+.visible {
+  opacity: 100;
   transition: opacity 0.5s ease;
 }
 
