@@ -20,7 +20,7 @@ export function Imprint() {
       <p>Telefon: +49 179 111 00 46</p>
       <p>E-Mail: mail@wandgestaltung-reinl.de</p>
       <h3>Umsatzsteuer-ID</h3>
-      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
+      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:</p>
       <p>49/261/08064</p>
       <h3>Angaben zur Berufshaftpflichtversicherung</h3>
       <p>Name des Versicherers:</p>

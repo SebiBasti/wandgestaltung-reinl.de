@@ -12,20 +12,20 @@ export function Career() {
       <table>
         <tbody>
           <tr>
-            <td>1992 – 1995</td>
-            <td>Lehre zum Maler- und Lackierer</td>
+            <td>1992&nbsp;–&nbsp;1995</td>
+            <td>Lehre zum Maler- und&nbsp;Lackierer</td>
           </tr>
           <tr>
-            <td>1995 – 2005</td>
+            <td>1995&nbsp;–&nbsp;2005</td>
             <td>Malergeselle in renommiertem Unternehmen</td>
           </tr>
           <tr>
             <td>2005</td>
-            <td>Firmengründung in Berlin</td>
+            <td>Firmengründung in&nbsp;Berlin</td>
           </tr>
           <tr>
             <td>seit 2009</td>
-            <td>Sternenhimmelpartner</td>
+            <td>Sternenhimmel&shy;partner</td>
           </tr>
           <tr>
             <td>seit 2010</td>
