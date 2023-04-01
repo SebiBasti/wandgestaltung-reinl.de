@@ -24,25 +24,15 @@ export function Pictures() {
     slides: []
   })
   const ref = useRef<ThumbnailsRef>(null)
-  const toggleThumbnails = useToggleThumbnails()
-  const [height, setHeight] = useState<number | undefined>(undefined)
+  const toggleThumbnails = useToggleThumbnails(ref)
 
   useEffect(() => {
-    // source: https://dev.to/vitaliemaldur/resize-event-listener-using-react-hooks-1k0c
-    let timeoutId: number | undefined = undefined
-    const resizeListener = () => {
-      clearTimeout(timeoutId)
-      timeoutId = window.setTimeout(() => setHeight(window.innerHeight), 150)
-    }
-    window.addEventListener('resize', resizeListener)
-
-    // setHeight(window.innerHeight)
-    toggleThumbnails(ref, height)
+    window.addEventListener('resize', toggleThumbnails)
 
     return () => {
-      window.removeEventListener('resize', resizeListener)
+      window.removeEventListener('resize', toggleThumbnails)
     }
-  }, [state, ref, toggleThumbnails, height])
+  }, [toggleThumbnails])
 
   const pictureButtons = picturesArr.map((el, index: number) => {
     return (
@@ -87,7 +77,10 @@ export function Pictures() {
       }}
       counter={{ style: { top: 'unset', bottom: 0 } }}
       on={{
-        entering: () => setState({ ...state, loaded: true }),
+        entering: () => {
+          setState({ ...state, loaded: true })
+          toggleThumbnails()
+        },
         exiting: () => setState({ ...state, loaded: false })
       }}
     />

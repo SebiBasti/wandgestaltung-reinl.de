@@ -1,6 +1,6 @@
 export * from './importAll'
 export * from './NextJsImage'
 export * from './customLightboxState'
-export * from './toggleThumbnails'
+export * from './useToggleThumbnails'
 export * from './lightboxElement'
 export * from './useHandleScroll'
