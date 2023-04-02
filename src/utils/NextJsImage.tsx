@@ -10,6 +10,7 @@ import Image from 'next/image'
 
 import { ReactNode, useState } from 'react'
 
+// source: https://yet-another-react-lightbox.com/examples/nextjs
 export function NextJsImage(props: RenderSlideProps): ReactNode {
   const { imageFit } = useLightboxProps().carousel
   const cover =
