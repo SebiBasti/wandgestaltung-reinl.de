@@ -1,6 +1,6 @@
 {
   "name": "wandgestaltung-reinl.de",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,20 +12,19 @@
   },
   "dependencies": {
     "@types/webpack-env": "^1.18.0",
-    "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
-    "next-seo": "^5.15.0",
+    "next-seo": "^6.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.59.2",
+    "sass": "^1.60.0",
     "use-debounce": "^9.0.3",
-    "yet-another-react-lightbox": "^3.2.0"
+    "yet-another-react-lightbox": "^3.3.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.31",
+    "@types/react": "^18.0.32",
     "@types/react-dom": "^18.0.11",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
