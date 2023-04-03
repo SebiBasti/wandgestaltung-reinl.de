@@ -2,7 +2,6 @@ const SEO = {
   title: 'Wandgestaltung Reinl',
   description:
     'Werte schaffen, Werte erhalten - Exklusive Malerarbeiten seit 2004',
-  canonical: 'https://www.wangestaltung-reinl.de/',
   openGraph: {
     type: 'website',
     locale: 'de_DE',
@@ -17,10 +16,10 @@ const SEO = {
         type: 'image/png',
         width: 1200,
         height: 627,
-        alt: 'wandgestaltung-reinl.de og metatag Bild',
-      },
-    ],
-  },
+        alt: 'wandgestaltung-reinl.de og metatag Bild'
+      }
+    ]
+  }
 }
 
 export default SEO

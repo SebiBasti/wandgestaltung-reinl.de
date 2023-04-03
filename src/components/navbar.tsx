@@ -6,7 +6,7 @@ import { useHandleScroll } from '@/utils'
 
 import navbar from '@/styles/navbar.module.scss'
 
-export default function Navbar() {
+export function Navbar() {
   const [visible, setVisible] = useState<boolean>(false)
   // handleScroll uses setVisible to trigger visibility depending on scrollY
   const handleScroll = useHandleScroll(setVisible)
