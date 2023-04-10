@@ -1,7 +1,7 @@
+import { RefObject } from 'react'
+
 import { useDebouncedCallback } from 'use-debounce'
 import { ThumbnailsRef } from 'yet-another-react-lightbox'
-
-import { RefObject } from 'react'
 
 // Define a custom hook `useToggleThumbnails`
 // that accepts a `RefObject` of the thumbnails component

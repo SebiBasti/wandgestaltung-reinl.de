@@ -1,8 +1,8 @@
-import { useHandleScroll } from '@/utils/useHandleScroll'
-
 import Image from 'next/image'
 
 import { useEffect, useState } from 'react'
+
+import { useHandleScroll } from '@/utils/'
 
 import scrollButton from '@/styles/scrollButton.module.scss'
 
@@ -10,14 +10,6 @@ export function ScrollButton() {
   const [visible, setVisible] = useState<boolean>(false)
   // handleScroll uses setVisible to trigger visibility depending on scrollY
   const handleScroll = useHandleScroll(setVisible)
-
-  // const toggleVisibility = () => {
-  //   if (window.scrollY > 120) {
-  //     setIsVisible(true)
-  //   } else {
-  //     setIsVisible(false)
-  //   }
-  // }
 
   const scrollToTop = () => {
     window.scrollTo({

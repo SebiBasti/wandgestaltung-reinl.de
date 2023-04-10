@@ -1,16 +1,15 @@
-import { ThumbnailsRef } from 'yet-another-react-lightbox'
-
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 
 import React, { useEffect, useRef, useState } from 'react'
 
 import { CustomLightboxState, useToggleThumbnails } from '@/utils'
+import { ThumbnailsRef } from 'yet-another-react-lightbox'
+
+import { picturesArr } from '~/images/references/imageIndex'
 
 import pictures from '@/styles/pictures.module.scss'
 import utils from '@/styles/utils.module.scss'
-
-import { picturesArr } from '~images/references/imageIndex'
 
 const Lightbox = dynamic(() =>
   import('@/utils/lightboxElement').then((mod) => mod.Lightbox)

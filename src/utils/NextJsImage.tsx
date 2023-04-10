@@ -1,3 +1,7 @@
+import Image from 'next/image'
+
+import { ReactNode, useState } from 'react'
+
 import { useDebounce } from 'use-debounce'
 import { RenderSlideProps } from 'yet-another-react-lightbox'
 import {
@@ -5,10 +9,6 @@ import {
   isImageSlide,
   useLightboxProps
 } from 'yet-another-react-lightbox/core'
-
-import Image from 'next/image'
-
-import { ReactNode, useState } from 'react'
 
 // source: https://yet-another-react-lightbox.com/examples/nextjs
 export function NextJsImage(props: RenderSlideProps): ReactNode {
