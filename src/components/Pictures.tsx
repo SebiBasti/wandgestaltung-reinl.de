@@ -12,7 +12,7 @@ import pictures from '@/styles/pictures.module.scss'
 import utils from '@/styles/utils.module.scss'
 
 const Lightbox = dynamic(() =>
-  import('@/utils/lightboxElement').then((mod) => mod.Lightbox)
+  import('@/utils/LightboxElement').then((mod) => mod.Lightbox)
 )
 
 export function Pictures() {

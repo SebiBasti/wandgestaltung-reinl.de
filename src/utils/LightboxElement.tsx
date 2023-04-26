@@ -1,5 +1,3 @@
-import React from 'react'
-
 import LightboxComponent, {
   LightboxExternalProps
 } from 'yet-another-react-lightbox'
