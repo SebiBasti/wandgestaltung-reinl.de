@@ -1,6 +1,6 @@
 {
   "name": "wandgestaltung-reinl.de",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -14,31 +14,32 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@next/swc-darwin-arm64": "^13.3.0",
-    "next": "13.3.0",
-    "next-seo": "^6.0.0",
+    "@next/swc-darwin-arm64": "^14.1.0",
+    "next": "14.1.0",
+    "next-seo": "^6.4.0",
+    "pretty-quick": "^4.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.60.0",
-    "use-debounce": "^9.0.3",
-    "yet-another-react-lightbox": "^3.3.0"
+    "sass": "^1.70.0",
+    "use-debounce": "^10.0.0",
+    "yet-another-react-lightbox": "^3.16.0"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/node": "^18.15.11",
-    "@types/react": "^18.0.32",
-    "@types/react-dom": "^18.0.11",
-    "@types/webpack-env": "^1.18.0",
-    "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "eslint-config-prettier": "^8.8.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.0",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.7",
-    "prettier-plugin-css-order": "^1.3.0",
-    "prettier-plugin-packagejson": "^2.4.3",
-    "prettier-plugin-sort-json": "^1.0.0",
-    "typescript": "^5.0.3"
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
+    "@types/react-dom": "^18.2.18",
+    "@types/webpack-env": "^1.18.4",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.1",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
+    "prettier-plugin-css-order": "^2.0.1",
+    "prettier-plugin-packagejson": "^2.4.10",
+    "prettier-plugin-sort-json": "^3.1.0",
+    "typescript": "^5.3.3"
   }
 }
