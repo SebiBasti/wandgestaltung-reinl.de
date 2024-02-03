@@ -9,30 +9,26 @@ export function Career() {
       aria-labelledby={'career-title'}
     >
       <h2 id={'career-title'}>Laufbahn:</h2>
-      <table>
-        <tbody>
-          <tr>
-            <td>1992&nbsp;–&nbsp;1995</td>
-            <td>Lehre zum Maler- und&nbsp;Lackierer</td>
-          </tr>
-          <tr>
-            <td>1995&nbsp;–&nbsp;2005</td>
-            <td>Malergeselle in renommiertem Unternehmen</td>
-          </tr>
-          <tr>
-            <td>2005</td>
-            <td>Firmengründung in&nbsp;Berlin</td>
-          </tr>
-          <tr>
-            <td>seit 2009</td>
-            <td>Sternenhimmel&shy;partner</td>
-          </tr>
-          <tr>
-            <td>seit 2010</td>
-            <td>Entwicklung der Designtechnik</td>
-          </tr>
-        </tbody>
-      </table>
+      <p className={`${career['list-item']}`}>
+        <span>1992&nbsp;–&nbsp;1995</span>
+        <span>Lehre zum Maler- und&nbsp;Lackierer</span>
+      </p>
+      <p className={`${career['list-item']}`}>
+        <span>1995&nbsp;–&nbsp;2005</span>
+        <span>Malergeselle in renommiertem Unternehmen</span>
+      </p>
+      <p className={`${career['list-item']}`}>
+        <span>2005</span>
+        <span>Firmengründung in&nbsp;Berlin</span>
+      </p>
+      <p className={`${career['list-item']}`}>
+        <span>seit 2009</span>
+        <span>Sternenhimmel&shy;partner</span>
+      </p>
+      <p className={`${career['list-item']}`}>
+        <span>seit 2010</span>
+        <span>Entwicklung der Designtechnik</span>
+      </p>
     </section>
   )
 }
